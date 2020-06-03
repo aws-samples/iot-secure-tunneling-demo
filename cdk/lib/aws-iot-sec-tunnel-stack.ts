@@ -51,7 +51,7 @@ apt-get -y install build-essential g++ tmux nodejs npm git jq awscli
 cd /home/ubuntu
 su - ubuntu -c 'git clone https://github.com/aws-samples/iot-secure-tunneling-demo.git'
 cd /home/ubuntu/iot-secure-tunneling-demo
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && git checkout dev'
+su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo'
 su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/device-agent && npm install'
 su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/device-agent/run.sh'`
       )

@@ -44,7 +44,8 @@ cd ~/environment/iot-secure-tunneling/
 ```
 ![](https://github.com/aws-samples/iot-secure-tunneling-demo/blob/docs/imgs/test/test3.gif)
 
-At this point, the sourceConnectionState status should be CONNECTED as well. You can check it with the following command:
+At this point, the sourceConnectionState status should be CONNECTED as well. Open a new terminal windown on Cloud9 (the current one is running the local proxy in source mode) and run the following command to check it:
+
 ```
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/describe.sh 
@@ -64,7 +65,7 @@ We can finally ssh to the device. The picture bellow illustrates the process:
 2. The tunnel enables the ssh connection to the device.
 3. Once the request arrives on the local proxy running in destination mode on the device, it is forwarded to the local ssh daemons running on port 22.
 
-Open a new terminal windown on Cloud9 (the current one is running the local proxy in source mode) and run the following command:
+On the second terminal windown on Cloud9 (the first one is running the local proxy in source mode) and run the following command:
 
 ```
 cd ~/environment/iot-secure-tunneling/
