@@ -1,0 +1,235 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 157
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 22
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Cleaning Up The Demo
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 532
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 1874
+    content: c
+  - delay: 74
+    content: d
+  - delay: 95
+    content: ' '
+  - delay: 638
+    content: '~'
+  - delay: 225
+    content: /
+  - delay: 197
+    content: e
+  - delay: 189
+    content: 'n'
+  - delay: 237
+    content: v
+  - delay: 208
+    content: ironment/
+  - delay: 762
+    content: i
+  - delay: 215
+    content: o
+  - delay: 90
+    content: t-secure-tunneling/
+  - delay: 404
+    content: "\r\n"
+  - delay: 17
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 820
+    content: .
+  - delay: 159
+    content: /
+  - delay: 81
+    content: b
+  - delay: 179
+    content: i
+  - delay: 50
+    content: n/
+  - delay: 458
+    content: c
+  - delay: 114
+    content: l
+  - delay: 110
+    content: 'eanup.sh '
+  - delay: 429
+    content: "\r\n################################################################################\r\n#                          Deleting the S3 bucket ...                          #\r\n################################################################################\r\n"
+  - delay: 578
+    content: "Deleting the S3 bucket...\r\n"
+  - delay: 603
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/ec2/key-pair.json\r\n"
+  - delay: 22
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/certs/secure-tunnel-demo.private.key\r\n"
+  - delay: 13
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/ec2/secure-tunnel-demo.pem\r\n"
+  - delay: 12
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/resources/endpoint.json\r\ndelete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/resources/policy.json\r\n"
+  - delay: 5
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/certs/root.ca.bundle.pem\r\n"
+  - delay: 21
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/resources/thing.json\r\ndelete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/resources/certs.json\r\n"
+  - delay: 6
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/resources/tunnel.json\r\n"
+  - delay: 5
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/certs/secure-tunnel-demo.public.key\r\n"
+  - delay: 51
+    content: "delete: s3://awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2/iot/certs/secure-tunnel-demo.certificate.pem\r\n"
+  - delay: 253
+    content: "remove_bucket: awsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2\r\n"
+  - delay: 51
+    content: "Successfully deleted the S3 bucket\r\n\r\n################################################################################\r\n#                           Deleting the Device VPC...                         #\r\n################################################################################\r\n"
+  - delay: 5515
+    content: "\e[32m\e[34mAwsIotSecTunnelStack\e[32m: destroying...\e[39m\r\n"
+  - delay: 250
+    content: "   0 | 3:40:03 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::CloudFormation::Stack            | \e[0m\e[1mAwsIotSecTunnelStack\e[22m\e[0m \e[36m\e[1mUser Initiated\e[22m\e[39m\r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PublicSubnet1/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPublicSubnet1DefaultRoute142EFE20) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PublicSubnet2/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPublicSubnet2DefaultRoute96937F81) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1RouteTableAssociation6703345A) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PublicSubnet2/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPublicSubnet2RouteTableAssociation65635D75) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2RouteTableAssociation8F92C10A) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Instance                    | \e[0m\e[1mdevice\e[22m\e[0m \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PublicSubnet1/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPublicSubnet1RouteTableAssociation3D66FE6A) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1DefaultRoute7F5B14C3) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2DefaultRoute3AE41EE8) \r\n   0 | 3:40:06 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::CDK::Metadata                    | \e[0m\e[1mCDKMetadata\e[22m\e[0m \r\n   0 | 3:40:06 PM | \e[0mDELETE_SKIPPED      \e[0m | AWS::S3::Bucket                       | \e[0m\e[1maws-secure-tunneling-demo\e[22m\e[0m (awssecuretunnelingdemoBC52C7AD) \r\n   1 | 3:40:07 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::CDK::Metadata                    | \e[32m\e[1mCDKMetadata\e[22m\e[39m \r\n"
+  - delay: 250
+    content: "   2 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1RouteTableAssociation6703345A) \r\n   3 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PublicSubnet2/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPublicSubnet2DefaultRoute96937F81) \r\n   4 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PublicSubnet1/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPublicSubnet1DefaultRoute142EFE20) \r\n   5 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2RouteTableAssociation8F92C10A) \r\n   6 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PublicSubnet2/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPublicSubnet2RouteTableAssociation65635D75) \r\n   7 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2DefaultRoute3AE41EE8) \r\n   8 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PublicSubnet1/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPublicSubnet1RouteTableAssociation3D66FE6A) \r\n   9 | 3:40:21 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1DefaultRoute7F5B14C3) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/Subnet\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1SubnetCBF0CF52) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PublicSubnet2/RouteTable\e[22m\e[0m (iotSecureTunnelingPublicSubnet2RouteTable68CCFBD3) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::VPCGatewayAttachment        | \e[0m\e[1miotSecureTunneling/VPCGW\e[22m\e[0m (iotSecureTunnelingVPCGWEB83A4DC) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/Subnet\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2Subnet940C3ACB) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/RouteTable\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2RouteTable16514F7F) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PublicSubnet1/RouteTable\e[22m\e[0m (iotSecureTunnelingPublicSubnet1RouteTable430E5EF2) \r\n   9 | 3:40:22 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::NatGateway                  | \e[0m\e[1miotSecureTunneling/PublicSubnet1/NATGateway\e[22m\e[0m (iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84) \r\n   9 | 3:40:23 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/RouteTable\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1RouteTableB329BC9D) \r\n  10 | 3:40:23 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PublicSubnet2/RouteTable\e[22m\e[39m (iotSecureTunnelingPublicSubnet2RouteTable68CCFBD3) \r\n  10 | 3:40:23 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::NatGateway                  | \e[0m\e[1miotSecureTunneling/PublicSubnet2/NATGateway\e[22m\e[0m (iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5) \r\n  11 | 3:40:23 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PublicSubnet1/RouteTable\e[22m\e[39m (iotSecureTunnelingPublicSubnet1RouteTable430E5EF2) \r\n  12 | 3:40:23 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/RouteTable\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2RouteTable16514F7F) \r\n  13 | 3:40:23 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/RouteTable\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1RouteTableB329BC9D) \r\n"
+  - delay: 250
+    content: "  14 | 3:40:38 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/Subnet\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1SubnetCBF0CF52) \r\n  15 | 3:40:38 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/Subnet\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2Subnet940C3ACB) \r\n"
+  - delay: 250
+    content: " 15 Currently in progress: \e[1mAwsIotSecTunnelStack, device, iotSecureTunnelingVPCGWEB83A4DC, iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84, iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5\e[22m\r\n"
+  - delay: 250
+    content: "  16 | 3:41:24 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::NatGateway                  | \e[32m\e[1miotSecureTunneling/PublicSubnet1/NATGateway\e[22m\e[39m (iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84) \r\n  17 | 3:41:24 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::NatGateway                  | \e[32m\e[1miotSecureTunneling/PublicSubnet2/NATGateway\e[22m\e[39m (iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5) \r\n  17 | 3:41:25 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PublicSubnet2/Subnet\e[22m\e[0m (iotSecureTunnelingPublicSubnet2Subnet641A6D03) \r\n  17 | 3:41:25 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::EIP                         | \e[0m\e[1miotSecureTunneling/PublicSubnet2/EIP\e[22m\e[0m (iotSecureTunnelingPublicSubnet2EIP48A46B19) \r\n  17 | 3:41:25 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::EIP                         | \e[0m\e[1miotSecureTunneling/PublicSubnet1/EIP\e[22m\e[0m (iotSecureTunnelingPublicSubnet1EIP7F6054EE) \r\n"
+  - delay: 250
+    content: "  18 | 3:41:26 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::EIP                         | \e[32m\e[1miotSecureTunneling/PublicSubnet2/EIP\e[22m\e[39m (iotSecureTunnelingPublicSubnet2EIP48A46B19) \r\n  19 | 3:41:26 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::EIP                         | \e[32m\e[1miotSecureTunneling/PublicSubnet1/EIP\e[22m\e[39m (iotSecureTunnelingPublicSubnet1EIP7F6054EE) \r\n"
+  - delay: 250
+    content: "  20 | 3:41:41 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PublicSubnet2/Subnet\e[22m\e[39m (iotSecureTunnelingPublicSubnet2Subnet641A6D03) \r\n"
+  - delay: 250
+    content: " 20 Currently in progress: \e[1mAwsIotSecTunnelStack, device, iotSecureTunnelingVPCGWEB83A4DC\e[22m\r\n"
+  - delay: 250
+    content: "  21 | 3:43:15 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Instance                    | \e[32m\e[1mdevice\e[22m\e[39m \r\n  21 | 3:43:16 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PublicSubnet1/Subnet\e[22m\e[0m (iotSecureTunnelingPublicSubnet1Subnet1C1ABA59) \r\n  21 | 3:43:16 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::IAM::InstanceProfile             | \e[0m\e[1msecureTunnelProfile\e[22m\e[0m \r\n  22 | 3:43:17 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::IAM::InstanceProfile             | \e[32m\e[1msecureTunnelProfile\e[22m\e[39m \r\n  22 | 3:43:17 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::IAM::Role                        | \e[0m\e[1mssminstancerole\e[22m\e[0m (ssminstanceroleC712CFDC) \r\n"
+  - delay: 250
+    content: "  23 | 3:43:19 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::IAM::Role                        | \e[32m\e[1mssminstancerole\e[22m\e[39m (ssminstanceroleC712CFDC) \r\n"
+  - delay: 250
+    content: "  24 | 3:43:32 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PublicSubnet1/Subnet\e[22m\e[39m (iotSecureTunnelingPublicSubnet1Subnet1C1ABA59) \r\n  25 | 3:43:33 PM | \e[32mDELETE_COMPLETE     \e[39m | AWS::EC2::VPCGatewayAttachment        | \e[32m\e[1miotSecureTunneling/VPCGW\e[22m\e[39m (iotSecureTunnelingVPCGWEB83A4DC) \r\n"
+  - delay: 250
+    content: "  25 | 3:43:34 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::VPC                         | \e[0m\e[1miotSecureTunneling\e[22m\e[0m (iotSecureTunneling1EF7EF05) \r\n  25 | 3:43:34 PM | \e[0mDELETE_IN_PROGRESS  \e[0m | AWS::EC2::InternetGateway             | \e[0m\e[1miotSecureTunneling/IGW\e[22m\e[0m (iotSecureTunnelingIGWD7044CBA) \r\n"
+  - delay: 2000
+    content: "\e[32m\e[39m\r\n\e[32m ✅  \e[34mAwsIotSecTunnelStack\e[32m: destroyed\e[39m\r\n"
+  - delay: 8
+    content: "\r\n./bin/cleanup.sh: line 20: Remove: command not found\r\n################################################################################\r\n#           Cleaning up the Iot Agent resources on AWS IoT Core...             #\r\n################################################################################\r\n"
+  - delay: 21
+    content: "[1/5] Detaching secure-tunnel-demo-policy from certificate...\r\n"
+  - delay: 1134
+    content: "[2/5] Detaching certificate from secure-tunnel-demo...\r\n"
+  - delay: 588
+    content: "[3/5] Deleting the policy secure-tunnel-demo-policy...\r\n"
+  - delay: 613
+    content: "[4/5] Deleting the certificate...\r\n"
+  - delay: 1248
+    content: "[5/5] Deleting the thing secure-tunnel-demo...\r\n"
+  - delay: 579
+    content: "Successfully deleted all AWS IoT resources\r\n\r\n################################################################################\r\n#                         Deleting the EC2 key pair...                         #\r\n################################################################################\r\n"
+  - delay: 5
+    content: "Deleting the EC2 key pair secure-tunnel-demo...\r\n"
+  - delay: 714
+    content: "Successfully deleted the EC2 key pair\r\n\r\n"
+  - delay: 35
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 5000
+    content: " "

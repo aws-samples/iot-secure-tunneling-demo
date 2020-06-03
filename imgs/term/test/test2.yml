@@ -1,0 +1,175 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment/iot-secure-tunneling
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 166
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 35
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: auto
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Checking The Tunnel Status
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 560
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 250
+    content: c
+  - delay: 152
+    content: d
+  - delay: 139
+    content: ' '
+  - delay: 1187
+    content: '~'
+  - delay: 255
+    content: /
+  - delay: 548
+    content: e
+  - delay: 134
+    content: 'n'
+  - delay: 103
+    content: vironment/
+  - delay: 438
+    content: i
+  - delay: 209
+    content: o
+  - delay: 113
+    content: t-secure-tunneling/
+  - delay: 459
+    content: "\r\n"
+  - delay: 18
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 1339
+    content: .
+  - delay: 223
+    content: /
+  - delay: 117
+    content: b
+  - delay: 193
+    content: i
+  - delay: 79
+    content: n/
+  - delay: 250
+    content: t
+  - delay: 191
+    content: u
+  - delay: 131
+    content: nnel/
+  - delay: 402
+    content: d
+  - delay: 76
+    content: e
+  - delay: 700
+    content: s
+  - delay: 220
+    content: 'cribe.sh '
+  - delay: 1129
+    content: "\r\n"
+  - delay: 5
+    content: "Getting tunnel information from AWS IoT...\r\n"
+  - delay: 559
+    content: "{\r\n    \"tunnel\": {\r\n        \"tunnelId\": \"02f82c4e-fd5d-4fe0-af30-795f083cbd7b\",\r\n        \"tunnelArn\": \"arn:aws:iot:us-east-1:012345678901:tunnel/02f82c4e-fd5d-4fe0-af30-795f083cbd7b\",\r\n        \"status\": \"OPEN\",\r\n        \"sourceConnectionState\": {\r\n            \"status\": \"DISCONNECTED\"\r\n        },\r\n        \"destinationConnectionState\": {\r\n            \"status\": \"CONNECTED\",\r\n            \"lastUpdatedAt\": 1586880519.063\r\n        },\r\n        \"destinationConfig\": {\r\n            \"thingName\": \"secure-tunnel-demo\",\r\n            \"services\": [\r\n                \"ssh\"\r\n            ]\r\n        },\r\n        \"timeoutConfig\": {\r\n            \"maxLifetimeTimeoutMinutes\": 720\r\n        },\r\n        \"tags\": [],\r\n        \"createdAt\": 1586880518.776,\r\n        \"lastUpdatedAt\": 1586880518.776\r\n    }\r\n}\r\n"
+  - delay: 59
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 6223
+    content: " "

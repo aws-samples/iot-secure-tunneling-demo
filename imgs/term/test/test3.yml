@@ -1,0 +1,179 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment/iot-secure-tunneling
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 166
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 22
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: auto
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Run Local Proxy in Source Mode
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 200
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 250
+    content: c
+  - delay: 74
+    content: d
+  - delay: 292
+    content: ' '
+  - delay: 200
+    content: '~'
+  - delay: 238
+    content: /
+  - delay: 250
+    content: e
+  - delay: 204
+    content: nvironment/
+  - delay: 250
+    content: i
+  - delay: 228
+    content: o
+  - delay: 100
+    content: t-secure-tunneling/
+  - delay: 458
+    content: "\r\n"
+  - delay: 18
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 250
+    content: .
+  - delay: 200
+    content: /
+  - delay: 250
+    content: b
+  - delay: 231
+    content: i
+  - delay: 86
+    content: n/
+  - delay: 250
+    content: l
+  - delay: 148
+    content: o
+  - delay: 109
+    content: cal-proxy/
+  - delay: 175
+    content: r
+  - delay: 198
+    content: u
+  - delay: 305
+    content: 'n'
+  - delay: 100
+    content: "\a-"
+  - delay: 436
+    content: "\a"
+  - delay: 250
+    content: s
+  - delay: 265
+    content: o
+  - delay: 143
+    content: 'urce-mode.sh '
+  - delay: 1041
+    content: "\r\n"
+  - delay: 493
+    content: "[2020-04-14T16:11:57.321654]{6477}[warning] Found access token supplied via CLI arg. Consider using environment variable AWSIOT_TUNNEL_ACCESS_TOKEN instead\r\n[2020-04-14T16:11:57.324139]{6477}[info]    Starting proxy in source mode\r\n[2020-04-14T16:11:57.326359]{6477}[info]    Attempting to establish web socket connection with endpoint wss://data.tunneling.iot.us-east-1.amazonaws.com:443\r\n"
+  - delay: 89
+    content: "[2020-04-14T16:11:57.415748]{6477}[info]    Web socket session ID: 12871efffedc21d9-00006d22-00029d10-ded95df4e3b0b65b-ac5baa16\r\n[2020-04-14T16:11:57.416875]{6477}[info]    Successfully established websocket connection with proxy server: wss://data.tunneling.iot.us-east-1.amazonaws.com:443\r\n[2020-04-14T16:11:57.417764]{6477}[info]    Listening for new connection on port 5555\r\n"
+  - delay: 5000
+    content: " "

@@ -1,11 +1,6 @@
-## My Project
+# AWS IoT Secure Tunneling Demo
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+Please visit the [master branch](https://github.com/aws-samples/iot-secure-tunneling-demo). 
 
 ## License
 

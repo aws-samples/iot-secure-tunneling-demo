@@ -1,0 +1,251 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 166
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 22
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: auto
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: SSH To The Device
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 543
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 861
+    content: c
+  - delay: 77
+    content: d
+  - delay: 59
+    content: ' '
+  - delay: 309
+    content: '~'
+  - delay: 250
+    content: /
+  - delay: 104
+    content: e
+  - delay: 103
+    content: nvironment/
+  - delay: 585
+    content: i
+  - delay: 200
+    content: o
+  - delay: 96
+    content: t-secure-tunneling/
+  - delay: 397
+    content: "\r\n"
+  - delay: 18
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 250
+    content: .
+  - delay: 157
+    content: /
+  - delay: 123
+    content: b
+  - delay: 182
+    content: i
+  - delay: 88
+    content: n/
+  - delay: 440
+    content: s
+  - delay: 187
+    content: s
+  - delay: 209
+    content: h/
+  - delay: 504
+    content: c
+  - delay: 132
+    content: o
+  - delay: 108
+    content: 'nnect.sh '
+  - delay: 1044
+    content: "\r\n"
+  - delay: 230
+    content: "Warning: Permanently added '[localhost]:5555' (ECDSA) to the list of known hosts.\r\r\n"
+  - delay: 1337
+    content: "Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1057-aws x86_64)\r\n\r\n * Documentation:  https://help.ubuntu.com\r\n * Management:     https://landscape.canonical.com\r\n * Support:        https://ubuntu.com/advantage\r\n\r\n  System information as of Tue Apr 14 16:13:19 UTC 2020\r\n\r\n  System load:  0.0               Processes:           88\r\n  Usage of /:   23.4% of 7.69GB   Users logged in:     0\r\n  Memory usage: 20%               IP address for eth0: 10.0.20.135\r\n  Swap usage:   0%\r\n\r\n74 packages can be updated.\r\n47 updates are security updates.\r\n\r\n\r\n\r\nThe programs included with the Ubuntu system are free software;\r\nthe exact distribution terms for each program are described in the\r\nindividual files in /usr/share/doc/*/copyright.\r\n\r\nUbuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by\r\napplicable law.\r\n\r\n"
+  - delay: 43
+    content: "To run a command as administrator (user \"root\"), use \"sudo <command>\".\r\nSee \"man sudo_root\" for details.\r\n\r\n"
+  - delay: 44
+    content: "\e]0;ubuntu@ip-10-0-20-135: ~\a\e[01;32mubuntu@ip-10-0-20-135\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 250
+    content: pw
+  - delay: 81
+    content: d
+  - delay: 136
+    content: "\r\n/home/ubuntu\r\n\e]0;ubuntu@ip-10-0-20-135: ~\a\e[01;32mubuntu@ip-10-0-20-135\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 1127
+    content: l
+  - delay: 107
+    content: s
+  - delay: 99
+    content: "\r\n\e[0m\e[01;34maws-iot-secure-tunneling\e[0m\r\n\e]0;ubuntu@ip-10-0-20-135: ~\a\e[01;32mubuntu@ip-10-0-20-135\e[00m:\e[01;34m~\e[00m$ "
+  - delay: 1087
+    content: c
+  - delay: 77
+    content: d
+  - delay: 132
+    content: ' '
+  - delay: 369
+    content: a
+  - delay: 163
+    content: w
+  - delay: 232
+    content: s
+  - delay: 96
+    content: '-iot-secure-tunneling/'
+  - delay: 584
+    content: "\r\n\e]0;ubuntu@ip-10-0-20-135: ~/aws-iot-secure-tunneling\a\e[01;32mubuntu@ip-10-0-20-135\e[00m:\e[01;34m~/aws-iot-secure-tunneling\e[00m$ "
+  - delay: 600
+    content: t
+  - delay: 84
+    content: a
+  - delay: 264
+    content: i
+  - delay: 205
+    content: l
+  - delay: 96
+    content: ' '
+  - delay: 163
+    content: '-'
+  - delay: 145
+    content: '1'
+  - delay: 167
+    content: '0'
+  - delay: 196
+    content: '0'
+  - delay: 181
+    content: f
+  - delay: 267
+    content: ' '
+  - delay: 257
+    content: l
+  - delay: 97
+    content: o
+  - delay: 132
+    content: gs/
+  - delay: 250
+    content: 'device-agent.log '
+  - delay: 640
+    content: "\r\n"
+  - delay: 6
+    content: "Downloading configuration files from s3...\r\nSuccessfully downloaded all configurations from S3\r\n2020-04-14T15:47:53.587Z [device-agent] info: Connected!\r\n2020-04-14T15:47:53.589Z [device-agent] info: Subscribing to $aws/things/secure-tunnel-demo/tunnels/notify...\r\n2020-04-14T15:47:53.591Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:48:53.631Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:49:53.692Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:50:53.752Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:51:53.813Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:52:53.873Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:53:53.933Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:54:53.994Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:55:54.054Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:56:54.115Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:57:54.157Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:58:54.218Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T15:59:54.278Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:00:54.339Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:01:54.399Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:02:54.459Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:03:54.520Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:04:54.580Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:05:54.641Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:06:54.701Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:07:54.762Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:08:38.888Z [device-agent] info: A tunnel just got created:\r\n2020-04-14T16:08:38.889Z [device-agent] info: {\"clientAccessToken\":\"AQGAAXjTmgvAaoGuSShJb-c5YPfhABsAAgABQQAMNTY0MTUxMjg0MDMzAAFUAANDQVQAAQAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtZWFzdC0xOjcwMTU0NTg5ODcwNzprZXkvMmU4ZTAxMDEtYzE3YS00NjU1LTlhYWQtNjA2N2I2NGVhZWQyALgBAgEAeIX_VrHrc7H3-w1G1LJ-MfZC3dpGrExxjW3jGpJQSQwFAZm06OoN5q9c5GrsRE7wC7YAAAB-MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAzW8J7xxamRZOmCDEcCARCAO2j9lKISmOtgAMyJlzgl0OW4EB_ofeJShk4iys5fe20W-lprRXvneBmjkzBi7BbHstergcPIvZ8CucMkAgAAAAAMAAAQAAAAAAAAAAAAAAAAANXXUd2tc5QrWqH0dP19Ixf_____AAAAAQAAAAAAAAAAAAAAAQAAAC-lzFDfEaOek_Dg0-8TLKvh3EuwObaPHtIO16rDckw6Wpt3LKXS8nB1kALzACej88kesFkhE0qz659FMFyGtgI=\",\"clientMode\":\"destination\",\"region\":\"us-east-1\",\"services\":[\"ssh\"]}\r\n2020-04-14T16:08:38.889Z [device-agent] info: opening the tunnel ... \r\n2020-04-14T16:08:54.778Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:09:54.839Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:10:54.899Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:11:54.959Z [device-agent] info: Publishing heartbeat message...\r\n2020-04-14T16:12:54.961Z [device-agent] info: Publishing heartbeat message...\r\n"
+  - delay: 8867
+    content: "^C\r\n\e]0;ubuntu@ip-10-0-20-135: ~/aws-iot-secure-tunneling\a\e[01;32mubuntu@ip-10-0-20-135\e[00m:\e[01;34m~/aws-iot-secure-tunneling\e[00m$ "
+  - delay: 4551
+    content: e
+  - delay: 306
+    content: x
+  - delay: 222
+    content: i
+  - delay: 364
+    content: t
+  - delay: 1588
+    content: "\r\nlogout\r\n"
+  - delay: 5
+    content: "Connection to localhost closed.\r\r\n"
+  - delay: 7
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 10000
+    content: " "

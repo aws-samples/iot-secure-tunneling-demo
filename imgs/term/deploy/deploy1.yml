@@ -1,0 +1,783 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 157
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 22
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Setting up Cloud9
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 522
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 4665
+    content: s
+  - delay: 93
+    content: u
+  - delay: 193
+    content: d
+  - delay: 187
+    content: o
+  - delay: 92
+    content: ' '
+  - delay: 982
+    content: a
+  - delay: 172
+    content: p
+  - delay: 237
+    content: t
+  - delay: 267
+    content: '-'
+  - delay: 170
+    content: g
+  - delay: 71
+    content: e
+  - delay: 175
+    content: t
+  - delay: 129
+    content: ' '
+  - delay: 176
+    content: i
+  - delay: 210
+    content: 'n'
+  - delay: 55
+    content: s
+  - delay: 123
+    content: t
+  - delay: 116
+    content: a
+  - delay: 265
+    content: l
+  - delay: 157
+    content: l
+  - delay: 115
+    content: ' '
+  - delay: 528
+    content: '-'
+  - delay: 413
+    content: 'y'
+  - delay: 73
+    content: ' '
+  - delay: 455
+    content: j
+  - delay: 97
+    content: q
+  - delay: 153
+    content: "\r\n"
+  - delay: 262
+    content: "\rReading package lists... 0%\r"
+  - delay: 239
+    content: "\rReading package lists... 100%\r\rReading package lists... Done\r\r\n"
+  - delay: 8
+    content: "\rBuilding dependency tree... 0%\r\rBuilding dependency tree... 0%\r"
+  - delay: 28
+    content: "\rBuilding dependency tree... 50%\r\rBuilding dependency tree... 50%\r"
+  - delay: 140
+    content: "\rBuilding dependency tree       \r\r\n\rReading state information... 0%\r\rReading state information... 0%\r\rReading state information... Done\r\r\n"
+  - delay: 137
+    content: "The following additional packages will be installed:\r\n  libjq1 libonig4\r\n"
+  - delay: 649
+    content: "The following NEW packages will be installed:\r\n  jq libjq1 libonig4\r\n0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.\r\nNeed to get 276 kB of archives.\r\nAfter this operation, 930 kB of additional disk space will be used.\r\n"
+  - delay: 5
+    content: "\r0% [Working]"
+  - delay: 18
+    content: "\r            \rGet:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]\r\n\r0% [1 libonig4 0 B/119 kB 0%]\r                             \r41% [Working]\r             \rGet:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]\r\n\r41% [2 libjq1 0 B/111 kB 0%]\r                            \r80% [Working]\r             \rGet:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]\r\n\r80% [3 jq 0 B/45.6 kB 0%]\r                         \r100% [Working]\r              \rFetched 276 kB in 0s (7158 kB/s)\r\n"
+  - delay: 920
+    content: "Selecting previously unselected package libonig4:amd64.\r\n(Reading database ... \r"
+  - delay: 92
+    content: "(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r"
+  - delay: 450
+    content: "(Reading database ... 65%\r"
+  - delay: 472
+    content: "(Reading database ... 70%\r"
+  - delay: 684
+    content: "(Reading database ... 75%\r"
+  - delay: 239
+    content: "(Reading database ... 80%\r"
+  - delay: 280
+    content: "(Reading database ... 85%\r"
+  - delay: 791
+    content: "(Reading database ... 90%\r"
+  - delay: 406
+    content: "(Reading database ... 95%\r"
+  - delay: 590
+    content: "(Reading database ... 100%\r(Reading database ... 103384 files and directories currently installed.)\r\n"
+  - delay: 6
+    content: "Preparing to unpack .../libonig4_6.7.0-1_amd64.deb ...\r\n"
+  - delay: 23
+    content: "Unpacking libonig4:amd64 (6.7.0-1) ...\r\n"
+  - delay: 171
+    content: "Selecting previously unselected package libjq1:amd64.\r\n"
+  - delay: 10
+    content: "Preparing to unpack .../libjq1_1.5+dfsg-2_amd64.deb ...\r\nUnpacking libjq1:amd64 (1.5+dfsg-2) ...\r\n"
+  - delay: 78
+    content: "Selecting previously unselected package jq.\r\n"
+  - delay: 10
+    content: "Preparing to unpack .../jq_1.5+dfsg-2_amd64.deb ...\r\nUnpacking jq (1.5+dfsg-2) ...\r\n"
+  - delay: 177
+    content: "Setting up libonig4:amd64 (6.7.0-1) ...\r\n"
+  - delay: 29
+    content: "Setting up libjq1:amd64 (1.5+dfsg-2) ...\r\n"
+  - delay: 35
+    content: "Setting up jq (1.5+dfsg-2) ...\r\n"
+  - delay: 35
+    content: "Processing triggers for man-db (2.8.3-2ubuntu0.1) ...\r\n"
+  - delay: 949
+    content: "Processing triggers for libc-bin (2.27-3ubuntu1) ...\r\n"
+  - delay: 4748
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 1084
+    content: 'n'
+  - delay: 334
+    content: p
+  - delay: 264
+    content: m
+  - delay: 105
+    content: ' '
+  - delay: 188
+    content: u
+  - delay: 241
+    content: p
+  - delay: 194
+    content: d
+  - delay: 130
+    content: a
+  - delay: 238
+    content: t
+  - delay: 65
+    content: e
+  - delay: 248
+    content: ' '
+  - delay: 198
+    content: '-'
+  - delay: 683
+    content: g
+  - delay: 1094
+    content: "\r\n"
+  - delay: 4243
+    content: "\e[?25l[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 63
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 48
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 108
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | rollbackFailedOptional: \e[32minfo\e[0m \e[35moutdated\e[0m updating [ { dep:\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadIdealTree:loadAllDepsIntoIdealTree: \e[7msill\e[0m \e[35minstall\e[0m loadIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 41
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[90m..................\e[0m] / loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 64
+    content: "[\e[90m..................\e[0m] \\ loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 153
+    content: "[\e[90m..................\e[0m] \\ loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 83
+    content: "[\e[90m..................\e[0m] \\ loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] \\ loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[90m..................\e[0m] \\ loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 60
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 75
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 68
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] | loadRequestedDeps: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m npm@6.14.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mremoveObsoleteDep\e[0m removing lodash.restparam@3.6.1 from the tree as its been replaced by a newer version or is no\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mremoveObsoleteDep\e[0m removing lodash.restparam@3.6.1 from the tree as its been replaced by a newer version or is no\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mremoveObsoleteDep\e[0m removing lodash.restparam@3.6.1 from the tree as its been replaced by a newer version or is no\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 64
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-cdk@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ loadDep:table: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-sdk@2.656.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] / loadDep:table: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m aws-sdk@2.656.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m @aws-cdk/cfnspec@1.32.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m md5@2.2.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m charenc@0.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m ansi-regex@5.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m lodash@4.17.15 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m uri-js@4.2.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m astral-regex@1.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m color-convert@1.9.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m ansi-regex@4.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m zip-stream@2.1.3 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m zip-stream@2.1.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m lodash.isplainobject@4.0.6 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m wrappy@1.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[90m..................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m readable-stream@2.3.7 checking installable status\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[90m..................\e[0m] | loadDep:readable-stream: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m isarray@1.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] / loadDep:readable-stream: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m end-of-stream@1.4.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] - loadDep:readable-stream: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m base64-js@1.3.1 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] - loadDep:readable-stream: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m crc32-stream@3.0.1 checking installable status\e[0m\e[K\r"
+  - delay: 65
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m crc@3.8.0 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m crc@3.8.0 checking installable status\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m xmlbuilder@9.0.7 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m xmlbuilder@9.0.7 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m set-blocking@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m ansi-styles@4.2.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[90m..................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m color-name@1.1.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[90m..................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m p-limit@2.3.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m jsonfile@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m jsonfile@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m cli-color@0.1.7 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m heap@0.2.6 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m read@1.0.7 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m mute-stream@0.0.8 checking installable status\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m mute-stream@0.0.8 checking installable status\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m mute-stream@0.0.8 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] | fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m es6-promisify@5.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m ms@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:socks-proxy-agent: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m yallist@3.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m get-uri@2.0.4 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m ms@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m string_decoder@0.10.31 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] - fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m netmask@1.0.6 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m escodegen@1.14.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m source-map@0.6.1 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m deep-is@0.1.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m unpipe@1.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m setprototypeof@1.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m socks@2.3.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] / fetchMetadata: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m buffer-from@1.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:lodash.restparam: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:signal-exit: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:run-queue: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:path-parse: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:strip-ansi: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:which: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m \e[27m\e[90m.................\e[0m] \\ loadDep:stringify-package: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m  \e[27m\e[90m................\e[0m] \\ loadDep:url-parse-lax: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m  \e[27m\e[90m................\e[0m] \\ loadDep:is-symbol: \e[7msill\e[0m \e[35mresolveWithNewModule\e[0m regenerator-runtime@0.13.5 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m      \e[27m\e[90m............\e[0m] | diffTrees: \e[7msill\e[0m \e[35minstall\e[0m generateActionsToTake\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] \\ postinstall: \e[7msill\e[0m \e[35minstall\e[0m executeActions\e[0m\e[K\r"
+  - delay: 71
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] / extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-fa991ca2343ce81d.lock for /home/ubuntu/.nvm/versions/node/v10.19\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:cdk: \e[7msill\e[0m \e[35mextract\e[0m cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/cdk-178dc0e2 (11\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:cdk: \e[7msill\e[0m \e[35mextract\e[0m cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/cdk-178dc0e2 (11\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:@aws-cdk/region-info: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/region-info@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] / extract:cdk-assets: \e[7msill\e[0m \e[35mextract\e[0m cdk-assets@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/cd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] / extract:cdk-assets: \e[7msill\e[0m \e[35mextract\e[0m cdk-assets@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/cd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:@aws-cdk/cx-api: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cx-api@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:@aws-cdk/cx-api: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cx-api@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:@aws-cdk/cfnspec: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cfnspec@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:@aws-cdk/cfnspec: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cfnspec@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:@aws-cdk/cfnspec: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cfnspec@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:@aws-cdk/cfnspec: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cfnspec@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:@aws-cdk/cfnspec: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/cfnspec@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-cdk-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:typescript: \e[7msill\e[0m \e[35mextract\e[0m typescript@3.8.3 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/typ\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:typescript: \e[7msill\e[0m \e[35mextract\e[0m typescript@3.8.3 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/typ\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:typescript: \e[7msill\e[0m \e[35mextract\e[0m typescript@3.8.3 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/typ\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:typescript: \e[7msill\e[0m \e[35mextract\e[0m typescript@3.8.3 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/typ\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:aws-sdk: \e[7msill\e[0m \e[35mextract\e[0m aws-sdk@^2.654.0 extracted to /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/.staging/aws-sd\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / unbuild:semver: \e[7msill\e[0m \e[35mdoReverseSerial\e[0m unbuild 440\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | unbuild:semver: \e[32minfo\e[0m \e[35mlifecycle\e[0m semver@7.2.1~postuninstall: semver@7.2.1\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ remove:@aws-cdk/cdk-assets-schema: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/node_modules/@aws-cdk/cd\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - remove:semver: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/node_modules/@aws-cdk/cx-api/node_modules/se\e[0m\e[K\r"
+  - delay: 116
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | remove:@aws-cdk/region-info: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/node_modules/@aws-cdk/region-i\e[0m\e[K\r"
+  - delay: 48
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - remove:camelcase: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/node_modules/camelcase\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / remove:os-locale: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/node_modules/os-locale\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - remove:yargs: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/node_modules/yargs\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ remove:aws-cdk: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/node_modules/aws-cdk\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - remove:readable-stream: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/node_modules/readable-stream\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - remove:readable-stream: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/node_modules/readable-stream\e[0m\e[K\r"
+  - delay: 60
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - remove:readable-stream: \e[7msill\e[0m \e[35mremove\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/node_modules/readable-stream\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ finalize:typescript: \e[7msill\e[0m \e[35mdoSerial\e[0m finalize 440\e[0m\e[K\r"
+  - delay: 69
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ finalize:aws-cdk: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/node_modules/aws-cdk\e[0m\e[K\r"
+  - delay: 69
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - finalize:readable-stream: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/node_modules/readable-stream\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:typescript: \e[32;40mtiming\e[0m \e[35maction:finalize\e[0m Completed in 152ms\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:typescript: \e[32;40mtiming\e[0m \e[35maction:finalize\e[0m Completed in 152ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | build:@aws-cdk/cloudformation-diff: \e[7msill\e[0m \e[35mlinkStuff\e[0m @aws-cdk/cloudformation-diff@1.32.2 is installed into a global node_modules\e[0m\e[K\r"
+  - delay: 16
+    content: "\r\e[K\e[?25h/home/ubuntu/.nvm/versions/node/v10.19.0/bin/cdk -> /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/cdk/bin/cdk\r\n"
+  - delay: 26
+    content: "/home/ubuntu/.nvm/versions/node/v10.19.0/bin/npm -> /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/bin/npm-cli.js\r\n/home/ubuntu/.nvm/versions/node/v10.19.0/bin/npx -> /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/npm/bin/npx-cli.js\r\n"
+  - delay: 12
+    content: "\e[?25l[\e[7m            \e[27m\e[90m......\e[0m] - build:readable-stream: \e[7msill\e[0m \e[35mgently link\e[0m link does not already exist { link:\e[0m\e[K\r"
+  - delay: 33
+    content: "\r\e[K\e[?25h/home/ubuntu/.nvm/versions/node/v10.19.0/bin/tsc -> /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/typescript/bin/tsc\r\n/home/ubuntu/.nvm/versions/node/v10.19.0/bin/tsserver -> /home/ubuntu/.nvm/versions/node/v10.19.0/lib/node_modules/typescript/bin/tsserver\r\n"
+  - delay: 27
+    content: "\e[?25l[\e[7m            \e[27m\e[90m......\e[0m] - postinstall: \e[32minfo\e[0m \e[35mlifecycle\e[0m typescript@3.8.3~postinstall: typescript@3.8.3\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - postinstall: \e[32minfo\e[0m \e[35mlifecycle\e[0m typescript@3.8.3~postinstall: typescript@3.8.3\e[0m\e[K\r"
+  - delay: 76
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - postinstall: \e[32minfo\e[0m \e[35mlifecycle\e[0m typescript@3.8.3~postinstall: typescript@3.8.3\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - postinstall: \e[32minfo\e[0m \e[35mlifecycle\e[0m typescript@3.8.3~postinstall: typescript@3.8.3\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - postinstall: \e[32minfo\e[0m \e[35mlifecycle\e[0m typescript@3.8.3~postinstall: typescript@3.8.3\e[0m\e[K\r"
+  - delay: 37
+    content: "\r\e[K\e[?25h+ cdk@1.32.2\r\n+ npm@6.14.4\r\n+ typescript@3.8.3\r\nadded 10 packages from 5 contributors, removed 4 packages and updated 43 packages in 14.958s\r\n"
+  - delay: 35
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 5000
+    content: " "

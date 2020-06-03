@@ -1,0 +1,1105 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 157
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 22
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Deploying The Demo
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 543
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 250
+    content: cd
+  - delay: 201
+    content: ' '
+  - delay: 319
+    content: '~'
+  - delay: 185
+    content: /
+  - delay: 244
+    content: e
+  - delay: 130
+    content: 'n'
+  - delay: 293
+    content: v
+  - delay: 278
+    content: ironment/
+  - delay: 1699
+    content: i
+  - delay: 122
+    content: o
+  - delay: 81
+    content: t-secure-tunneling/
+  - delay: 1959
+    content: "\r\n"
+  - delay: 18
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 983
+    content: .
+  - delay: 206
+    content: /
+  - delay: 143
+    content: b
+  - delay: 238
+    content: i
+  - delay: 111
+    content: n/
+  - delay: 532
+    content: d
+  - delay: 58
+    content: e
+  - delay: 146
+    content: p
+  - delay: 129
+    content: 'loy.sh '
+  - delay: 477
+    content: "\r\n################################################################################\r\n#           Provisioning the Iot Agent resources on AWS IoT Core ...           #\r\n################################################################################\r\n"
+  - delay: 5
+    content: 'Enter the thing name [secure-tunnel-demo]: '
+  - delay: 1547
+    content: "\r\n"
+  - delay: 1101
+    content: "[1/6] Creating thing secure-tunnel-demo...\r\n"
+  - delay: 595
+    content: "[2/6] Creating keys and certs...\r\n"
+  - delay: 672
+    content: "[3/6] Creating the policy secure-tunnel-demo-policy...\r\n"
+  - delay: 595
+    content: "[4/6] Attaching secure-tunnel-demo-policy to certificate...\r\n"
+  - delay: 613
+    content: "[5/6] Attaching certificate to secure-tunnel-demo...\r\n"
+  - delay: 606
+    content: "[6/6] Getting Amazon root CA certificates...\r\n"
+  - delay: 250
+    content: "Successfully provisioned all AWS IoT resources\r\n\r\n################################################################################\r\n#                           Creating the EC2 key pair                          #\r\n################################################################################\r\nCreating the EC2 key pair secure-tunnel-demo...\r\n"
+  - delay: 883
+    content: "Successfully created the EC2 key pair\r\n\r\n################################################################################\r\n#                          Deploying the Device VPC...                         #\r\n################################################################################\r\n"
+  - delay: 1229
+    content: "\e[?25l[..................] / rollbackFailedOptional: verb npm-session 589b97d4007bd8c4\e[0m\e[K\r"
+  - delay: 47
+    content: "[..................] / rollbackFailedOptional: verb npm-session 589b97d4007bd8c4\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] / rollbackFailedOptional: verb npm-session 589b97d4007bd8c4\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] | rollbackFailedOptional: verb npm-session 589b97d4007bd8c4\e[0m\e[K\r"
+  - delay: 59
+    content: "[..................] | fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 48
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[..................] - fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[..................] - fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 60
+    content: "[..................] - fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[..................] - fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule npm-check-updates@4.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule update-notifier@4.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] \\ fetchMetadata: sill resolveWithNewModule supports-color@7.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] / fetchMetadata: sill resolveWithNewModule @types/color-name@1.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[..................] \\ fetchMetadata: sill resolveWithNewModule has-flag@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[..................] | fetchMetadata: sill resolveWithNewModule has-flag@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[#.................] \\ fetchMetadata: sill resolveWithNewModule colors@1.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[#.................] - fetchMetadata: sill resolveWithNewModule path-exists@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 54
+    content: "[#.................] - fetchMetadata: sill resolveWithNewModule p-try@2.2.0 checking installable status\e[0m\e[K\r"
+  - delay: 47
+    content: "[#.................] \\ fetchMetadata: sill resolveWithNewModule p-try@2.2.0 checking installable status\e[0m\e[K\r"
+  - delay: 48
+    content: "[#.................] | fetchMetadata: sill resolveWithNewModule jju@1.4.0 checking installable status\e[0m\e[K\r"
+  - delay: 57
+    content: "[##................] / loadDep:lodash: sill resolveWithNewModule path-exists@3.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule chalk@1.1.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule has-ansi@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule ansi-regex@2.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule aggregate-error@3.0.1 checking installable status\e[0m\e[K\r"
+  - delay: 64
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule indent-string@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule indent-string@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule indent-string@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule indent-string@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule indent-string@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule indent-string@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] / loadDep:which: sill resolveWithNewModule which@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] / loadDep:semver: sill resolveWithNewModule unique-filename@1.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule npm-install-checks@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule validate-npm-package-name@3.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule yallist@3.1.1 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule builtins@1.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule retry@0.10.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule unique-slug@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule isexe@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule isexe@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 66
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule json-parse-even-better-errors@2.2.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule json-parse-even-better-errors@2.2.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule dezalgo@1.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] \\ loadDep:unique-filename: sill resolveWithNewModule asap@2.0.6 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] - loadDep:unique-filename: sill resolveWithNewModule asap@2.0.6 checking installable status\e[0m\e[K\r"
+  - delay: 54
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule yallist@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule minimatch@3.0.4 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule brace-expansion@1.1.11 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule balanced-match@1.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] | loadDep:run-queue: sill resolveWithNewModule copy-concurrently@1.0.5 checking installable status\e[0m\e[K\r"
+  - delay: 57
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule readable-stream@2.3.7 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule readable-stream@2.3.7 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule minimist@1.2.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule minimist@1.2.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule yallist@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule yallist@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule encoding@0.1.12 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule iconv-lite@0.4.24 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - loadDep:npm-normalize-package-bin: sill resolveWithNewModule safer-buffer@2.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[##................] \\ loadDep:npm-package-arg: sill resolveWithNewModule ignore-walk@3.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - loadDep:npm-package-arg: sill resolveWithNewModule ignore-walk@3.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - loadDep:npm-package-arg: sill resolveWithNewModule ignore-walk@3.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] \\ loadDep:ssri: sill resolveWithNewModule @npmcli/ci-detect@1.2.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] \\ loadDep:ssri: sill resolveWithNewModule @npmcli/ci-detect@1.2.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule http-proxy-agent@4.0.1 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule humanize-ms@1.2.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] / loadDep:debug: sill resolveWithNewModule ms@2.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] \\ loadDep:debug: sill resolveWithNewModule ms@2.1.2 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule @tootallnate/once@1.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 54
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule socks@2.3.3 checking installable status\e[0m\e[K\r"
+  - delay: 52
+    content: "[##................] | loadDep:minipass: sill resolveWithNewModule ip@1.1.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule jsonparse@1.3.1 checking installable status\e[0m\e[K\r"
+  - delay: 55
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule sisteransi@1.0.5 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[##................] - fetchMetadata: sill resolveWithNewModule require-from-string@2.0.2 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[##................] \\ fetchMetadata: sill resolveWithNewModule sprintf-js@1.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] | fetchMetadata: sill resolveWithNewModule sprintf-js@1.0.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[##................] / fetchMetadata: sill resolveWithNewModule resolve@1.7.1 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[###...............] | fetchMetadata: sill resolveWithNewModule deep-extend@0.6.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[###...............] | fetchMetadata: sill resolveWithNewModule path-parse@1.0.6 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule path-parse@1.0.6 checking installable status\e[0m\e[K\r"
+  - delay: 63
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule xdg-basedir@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule xdg-basedir@4.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] | fetchMetadata: sill resolveWithNewModule string-width@3.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[###...............] | loadDep:xdg-basedir: sill resolveWithNewModule ansi-regex@5.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] \\ loadDep:xdg-basedir: sill resolveWithNewModule ansi-regex@5.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[###...............] | fetchMetadata: sill resolveWithNewModule is-obj@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule semver@6.3.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule crypto-random-string@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 57
+    content: "[###...............] / fetchMetadata: sill resolveWithNewModule typedarray-to-buffer@3.1.5 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] / fetchMetadata: sill resolveWithNewModule ci-info@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule ci-info@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] - fetchMetadata: sill resolveWithNewModule global-dirs@2.0.1 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] - fetchMetadata: sill resolveWithNewModule package-json@6.5.0 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[###...............] - fetchMetadata: sill resolveWithNewModule registry-url@5.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 59
+    content: "[###...............] - fetchMetadata: sill resolveWithNewModule registry-url@5.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 45
+    content: "[###...............] | fetchMetadata: sill resolveWithNewModule registry-url@5.1.0 checking installable status\e[0m\e[K\r"
+  - delay: 53
+    content: "[###...............] - fetchMetadata: sill resolveWithNewModule defer-to-connect@1.1.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] | fetchMetadata: sill resolveWithNewModule defer-to-connect@1.1.3 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[###...............] / loadDep:once: sill resolveWithNewModule pump@3.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 51
+    content: "[###...............] \\ fetchMetadata: sill resolveWithNewModule json-buffer@3.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 49
+    content: "[###...............] - fetchMetadata: sill resolveWithNewModule prepend-http@2.0.0 checking installable status\e[0m\e[K\r"
+  - delay: 50
+    content: "[######............] / diffTrees: sill install generateActionsToTake\e[0m\e[K\r"
+  - delay: 75
+    content: "[#######...........] - postinstall: sill install executeActions\e[0m\e[K\r"
+  - delay: 53
+    content: "[#######...........] | extract:npm-check-updates: verb lock using /home/ubuntu/.npm/_locks/staging-a19cd704e34e87ce.lock for /home/ubuntu/.npm/_npx/6785/lib\e[0m\e[K\r"
+  - delay: 50
+    content: "[#######...........] | extract:npm-check-updates: verb lock using /home/ubuntu/.npm/_locks/staging-a19cd704e34e87ce.lock for /home/ubuntu/.npm/_npx/6785/lib\e[0m\e[K\r"
+  - delay: 53
+    content: "[#######...........] | extract:npm-check-updates: verb lock using /home/ubuntu/.npm/_locks/staging-a19cd704e34e87ce.lock for /home/ubuntu/.npm/_npx/6785/lib\e[0m\e[K\r"
+  - delay: 50
+    content: "[########..........] \\ extract:defer-to-connect: sill extract write-file-atomic@3.0.3\e[0m\e[K\r"
+  - delay: 50
+    content: "[########..........] / extract:http-cache-semantics: sill extract cacheable-request@6.1.0\e[0m\e[K\r"
+  - delay: 50
+    content: "[########..........] / extract:asap: sill extract npm-packlist@2.1.1\e[0m\e[K\r"
+  - delay: 54
+    content: "[########..........] | extract:update-notifier: sill extract p-map@^4.0.0 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/p-map-7838ec17\e[0m\e[K\r"
+  - delay: 50
+    content: "[#########.........] - extract:rimraf: sill extract strip-ansi@3.0.1\e[0m\e[K\r"
+  - delay: 57
+    content: "[#########.........] \\ extract:end-of-stream: sill tarball trying ansi-regex@^5.0.0 by hash: sha512-bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak\e[0m\e[K\r"
+  - delay: 54
+    content: "[#########.........] \\ extract:make-fetch-happen: sill extract once@^1.3.0 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/once-e12eb7f9\e[0m\e[K\r"
+  - delay: 53
+    content: "[#########.........] - extract:unique-string: sill extract encoding@0.1.12\e[0m\e[K\r"
+  - delay: 56
+    content: "[#########.........] | extract:string-width: sill extract is-fullwidth-code-point@^3.0.0 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/\e[0m\e[K\r"
+  - delay: 50
+    content: "[##########........] | extract:chalk: sill extract locate-path@3.0.0\e[0m\e[K\r"
+  - delay: 55
+    content: "[##########........] | extract:run-queue: sill extract humanize-ms@1.2.1\e[0m\e[K\r"
+  - delay: 56
+    content: "[##########........] \\ extract:path-parse: sill extract minipass-collect@1.0.2\e[0m\e[K\r"
+  - delay: 52
+    content: "[##########........] / extract:p-locate: sill extract clone-response@1.0.2\e[0m\e[K\r"
+  - delay: 50
+    content: "[##########........] | extract:sprintf-js: sill extract npm-bundled@^1.1.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/npm-bundled-31\e[0m\e[K\r"
+  - delay: 50
+    content: "[##########........] / extract:normalize-url: sill extract json-buffer@3.0.0\e[0m\e[K\r"
+  - delay: 52
+    content: "[###########.......] / extract:minipass-json-stream: sill extract is-typedarray@1.0.0\e[0m\e[K\r"
+  - delay: 53
+    content: "[###########.......] | extract:minimatch: sill extract lowercase-keys@^1.0.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/lowercase-ke\e[0m\e[K\r"
+  - delay: 51
+    content: "[###########.......] | extract:json-parse-even-better-errors: sill extract json-parse-even-better-errors@^2.0.1 extracted to /home/ubuntu/.npm/_npx/6785/lib\e[0m\e[K\r"
+  - delay: 49
+    content: "[############......] \\ extract:prompts: sill extract prompts@^2.3.2 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/prompts-26aa43ef (105\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] | extract:resolve: sill extract resolve@~1.7.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/resolve-f9faf1cf (605\e[0m\e[K\r"
+  - delay: 49
+    content: "[############......] | extract:resolve: sill extract resolve@~1.7.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/resolve-f9faf1cf (605\e[0m\e[K\r"
+  - delay: 51
+    content: "[############......] | extract:resolve: sill extract resolve@~1.7.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/resolve-f9faf1cf (605\e[0m\e[K\r"
+  - delay: 49
+    content: "[############......] | extract:resolve: sill extract resolve@~1.7.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/resolve-f9faf1cf (605\e[0m\e[K\r"
+  - delay: 57
+    content: "[############......] | extract:resolve: sill extract resolve@~1.7.1 extracted to /home/ubuntu/.npm/_npx/6785/lib/node_modules/.staging/resolve-f9faf1cf (605\e[0m\e[K\r"
+  - delay: 45
+    content: "[############......] \\ finalize:clean-stack: sill finalize /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/clean-stack\e[0m\e[K\r"
+  - delay: 54
+    content: "[############......] \\ finalize:minipass-sized: sill finalize /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/minipass-sized\e[0m\e[K\r"
+  - delay: 49
+    content: "[############......] - finalize:strip-json-comments: sill finalize /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/strip-json-co\e[0m\e[K\r"
+  - delay: 51
+    content: "[############......] - finalize:json-parse-helpfulerror: sill finalize /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/json-pars\e[0m\e[K\r"
+  - delay: 52
+    content: "[############......] / refresh-package-json:npm-check-updates: timing action:finalize Completed in 209ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] / refresh-package-json:npm-check-updates: timing action:finalize Completed in 209ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] \\ refresh-package-json:p-map: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/dez\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] \\ refresh-package-json:p-map: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/dez\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] \\ refresh-package-json:p-map: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/dez\e[0m\e[K\r"
+  - delay: 59
+    content: "[############......] / refresh-package-json:got: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/safe-\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] / refresh-package-json:got: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/safe-\e[0m\e[K\r"
+  - delay: 59
+    content: "[############......] - refresh-package-json:run-queue: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules\e[0m\e[K\r"
+  - delay: 52
+    content: "[############......] \\ refresh-package-json:semver: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/co\e[0m\e[K\r"
+  - delay: 54
+    content: "[############......] - refresh-package-json:debug: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/@np\e[0m\e[K\r"
+  - delay: 51
+    content: "[############......] - refresh-package-json:mkdirp: sill refresh-package-json /home/ubuntu/.npm/_npx/6785/lib/node_modules/npm-check-updates/node_modules/@n\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] | preinstall:run-queue: info lifecycle mkdirp@0.5.5~preinstall: mkdirp@0.5.5\e[0m\e[K\r"
+  - delay: 55
+    content: "[############......] | build:glob: sill linkStuff glob@7.1.6 is installed into a global node_modules\e[0m\e[K\r"
+  - delay: 50
+    content: "[############......] - postinstall:mkdirp: info lifecycle mkdirp@0.5.5~postinstall: mkdirp@0.5.5\e[0m\e[K\r"
+  - delay: 18
+    content: "\r\e[K\e[?25h"
+  - delay: 112
+    content: "npx: installed 235 in 9.923s\r\n"
+  - delay: 240
+    content: "Upgrading /home/ubuntu/environment/iot-secure-tunneling/cdk/package.json\r\n\e[1G[--------------------] 0/12 0%\e[0K"
+  - delay: 140
+    content: "\e[1G[==------------------] 1/12 8%\e[0K"
+  - delay: 15
+    content: "\e[1G[=====---------------] 3/12 25%\e[0K"
+  - delay: 15
+    content: "\e[1G[==========----------] 6/12 50%\e[0K"
+  - delay: 25
+    content: "\e[1G[=============-------] 8/12 66%\e[0K"
+  - delay: 50
+    content: "\e[1G[=================---] 10/12 83%\e[0K"
+  - delay: 50
+    content: "\e[1G[==================--] 11/12 91%\e[0K"
+  - delay: 49
+    content: "\e[1G[====================] 12/12 100%\e[0K\r\n"
+  - delay: 7
+    content: "\r\nAll dependencies match the latest package versions \e[32m\e[1m:)\e[22m\e[39m\r\n"
+  - delay: 50
+    content: "\e[?25l[\e[90m..................\e[0m] | rollbackFailedOptional: \e[34;40mverb\e[0m \e[35mnpm-session\e[0m 75936f36cef57937\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m  \e[27m\e[90m................\e[0m] \\ loadDep:@aws-cdk/core: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m   \e[27m\e[90m...............\e[0m] \\ loadDep:constructs: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m   \e[27m\e[90m...............\e[0m] \\ loadDep:constructs: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m    \e[27m\e[90m..............\e[0m] \\ loadDevDep:typescript: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[7m    \e[27m\e[90m..............\e[0m] \\ loadDep:chalk: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m    \e[27m\e[90m..............\e[0m] \\ loadDep:util-deprecate: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m    \e[27m\e[90m..............\e[0m] \\ loadDep:decamelize: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m    \e[27m\e[90m..............\e[0m] \\ loadDep:esprima: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[7m    \e[27m\e[90m..............\e[0m] \\ loadDep:jest-cli: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:v8-to-istanbul: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:@babel/types: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:walker: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:split-string: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:safe-regex: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:istanbul-lib-report: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:realpath-native: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:jest-regex-util: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:react-is: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:acorn-walk: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:string-length: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m     \e[27m\e[90m.............\e[0m] \\ loadDep:yn: \e[7msill\e[0m \e[35minstall\e[0m loadAllDepsIntoIdealTree\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | diffTrees: \e[7msill\e[0m \e[35minstall\e[0m generateActionsToTake\e[0m\e[K\r"
+  - delay: 65
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | diffTrees: \e[7msill\e[0m \e[35minstall\e[0m generateActionsToTake\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | postinstall: \e[7msill\e[0m \e[35minstall\e[0m executeActions\e[0m\e[K\r"
+  - delay: 71
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 70
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] \\ extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 82
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 65
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] | extract:typescript: \e[34;40mverb\e[0m \e[35mlock\e[0m using /home/ubuntu/.npm/_locks/staging-5c4be0d0e76f2751.lock for /home/ubuntu/environment/iot-secure-tu\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m       \e[27m\e[90m...........\e[0m] - extract:ansi-styles: \e[7msill\e[0m \e[35mextract\e[0m @types/node@13.11.1\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:chalk: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz 658ms\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:@types/istanbul-lib-report: \e[7msill\e[0m \e[35mextract\e[0m @types/istanbul-reports@1.1.1 extracted to /home/ubuntu/environment/iot-secure-tunne\e[0m\e[K\r"
+  - delay: 65
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:@babel/helper-plugin-utils: \e[7msill\e[0m \e[35mtarball\e[0m no local data for jest-runtime@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:@types/yargs: \e[7msill\e[0m \e[35mextract\e[0m @babel/helper-validator-identifier@7.9.5 extracted to /home/ubuntu/environment/iot-secure-tunnelin\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:@babel/helper-validator-identifier: \e[7msill\e[0m \e[35mextract\e[0m y18n@4.0.0\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:zip-stream: \e[7msill\e[0m \e[35mextract\e[0m jest-environment-jsdom@25.3.0\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:yallist: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jest-cli/-/jest-cli-25.3.0.tgz 275ms\e[0m\e[K\r"
+  - delay: 67
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:proxy-agent: \e[7msill\e[0m \e[35mextract\e[0m @types/jest@25.2.1 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.sta\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:archiver: \e[7msill\e[0m \e[35mtarball\e[0m no local data for w3c-xmlserializer@1.1.2. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:pac-proxy-agent: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @jest/reporters@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:pac-proxy-agent: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @jest/reporters@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:jest-environment-jsdom: \e[7msill\e[0m \e[35mextract\e[0m jest-changed-files@25.3.0\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:write-file-atomic: \e[7msill\e[0m \e[35mextract\e[0m pump@3.0.0\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:get-uri: \e[7msill\e[0m \e[35mtarball\e[0m no local data for babel-plugin-istanbul@6.0.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:w3c-xmlserializer: \e[7msill\e[0m \e[35mtarball\e[0m trying test-exclude@6.0.0 by hash: sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVP\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:get-stream: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-25.3.0.tgz 212ms\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:execa: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/sane/-/sane-4.1.0.tgz 191ms\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:babel-plugin-istanbul: \e[7msill\e[0m \e[35mextract\e[0m babel-plugin-istanbul@6.0.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cd\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:inflight: \e[7msill\e[0m \e[35mextract\e[0m pac-resolver@3.0.0\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:sane: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 268ms\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:color-name: \e[7msill\e[0m \e[35mtarball\e[0m no local data for html-encoding-sniffer@1.0.2. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:color-name: \e[7msill\e[0m \e[35mtarball\e[0m no local data for html-encoding-sniffer@1.0.2. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:color-convert: \e[7msill\e[0m \e[35mextract\e[0m color-convert@2.0.1 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:json-diff: \e[7msill\e[0m \e[35mextract\e[0m jsprim@1.4.1\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:which: \e[7msill\e[0m \e[35mtarball\e[0m trying v8-to-istanbul@4.1.3 by hash: sha512-sAjOC+Kki6aJVbUOXJbcR0MnbfjvBzwKZazEJymA2IX49uoOdEdk+4fBq5cXg\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:source-map: \e[7msill\e[0m \e[35mextract\e[0m degenerator@1.0.4 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.stagi\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:cross-spawn: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@babel/parser/-/parser-7.9.4.tgz 2152ms\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:whatwg-encoding: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/walker/-/walker-1.0.7.tgz 309ms\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:jest-config: \e[7msill\e[0m \e[35mtarball\e[0m no local data for nanomatch@1.2.13. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:jsprim: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/v8-to-istanbul/-/v8-to-istanbul-4.1.3.tgz 247ms\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:acorn: \e[7msill\e[0m \e[35mextract\e[0m acorn@7.1.1 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/acorn-16\e[0m\e[K\r"
+  - delay: 60
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] | extract:crc32-stream: \e[7msill\e[0m \e[35mextract\e[0m v8-to-istanbul@4.1.3 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.\e[0m\e[K\r"
+  - delay: 63
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:anymatch: \e[7msill\e[0m \e[35mtarball\e[0m no local data for unset-value@1.0.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:lazystream: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/snapdragon/-/snapdragon-0.8.2.tgz 216ms\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] \\ extract:compress-commons: \e[7msill\e[0m \e[35mtarball\e[0m no local data for union-value@1.0.1. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:extglob: \e[7msill\e[0m \e[35mextract\e[0m @jest/fake-timers@25.3.0\e[0m\e[K\r"
+  - delay: 66
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] - extract:unpipe: \e[7msill\e[0m \e[35mextract\e[0m readable-stream@2.3.7 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.stagi\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m        \e[27m\e[90m..........\e[0m] / extract:readable-stream: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/isobject/-/isobject-2.1.0.tgz 178ms\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:readable-stream: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/union-value/-/union-value-1.0.1.tgz 224ms\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:union-value: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/terminal-link/-/terminal-link-2.1.1.tgz 242ms\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:toidentifier: \e[7msill\e[0m \e[35mtarball\e[0m trying kind-of@3.2.2 by hash: sha1-MeohpzS6ubuw8yRm2JOupR5KPGQ=\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:levn: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jest-resolve-dependencies/-/jest-resolve-dependencies-25.3.0.tgz 198ms\e[0m\e[K\r"
+  - delay: 60
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:@jest/fake-timers: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/braces/-/braces-3.0.2.tgz 190ms\e[0m\e[K\r"
+  - delay: 65
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:to-regex-range: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @babel/helper-simple-access@7.8.3. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:jest-message-util: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@types/babel__core/-/babel__core-7.1.7.tgz 208ms\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:@types/babel__core: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/istanbul-lib-instrument/-/istanbul-lib-instrument-4.0.1.tgz\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:@types/babel__template: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@babel/helper-module-transforms/-/helper-module-transfo\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:@babel/helpers: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.9.5.tgz 20\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:@babel/helper-optimise-call-expression: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@babel/helper-get-function-arity/-/help\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:ansi-regex: \e[7msill\e[0m \e[35mtarball\e[0m no local data for jest-util@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:tmpl: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @jest/types@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:tmpl: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @jest/types@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:tmpl: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @jest/types@25.3.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:supports-hyperlinks: \e[7msill\e[0m \e[35mtarball\e[0m trying jest-matcher-utils@25.3.0 by hash: sha512-ZBUJ2fchNIZt+fyzkuCFBb8SKaU//Rln45augfUtbH\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:supports-hyperlinks: \e[7msill\e[0m \e[35mtarball\e[0m trying jest-matcher-utils@25.3.0 by hash: sha512-ZBUJ2fchNIZt+fyzkuCFBb8SKaU//Rln45augfUtbH\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:jest-snapshot: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@jest/console/-/console-25.3.0.tgz 339ms\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:table: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@jest/types/-/types-25.3.0.tgz 311ms\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:table: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/@jest/types/-/types-25.3.0.tgz 311ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:@aws-cdk/cx-api: \e[7msill\e[0m \e[35mextract\e[0m @jest/types@25.3.0\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:@jest/test-result: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jest-leak-detector/-/jest-leak-detector-25.3.0.tgz 177ms\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:jest-each: \e[7msill\e[0m \e[35mextract\e[0m @jest/types@25.3.0\e[0m\e[K\r"
+  - delay: 65
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:@jest/types: \e[7msill\e[0m \e[35mextract\e[0m @babel/traverse@7.9.5 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:@jest/types: \e[7msill\e[0m \e[35mtarball\e[0m trying ansi-regex@4.1.0 by hash: sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1\e[0m\e[K\r"
+  - delay: 48
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:jest-diff: \e[7msill\e[0m \e[35mextract\e[0m supports-color@7.1.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.sta\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:ansi-regex: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/strip-final-newline/-/strip-final-newline-2.0.0.tgz 144ms\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] | extract:string_decoder: \e[7msill\e[0m \e[35mtarball\e[0m no local data for source-map-url@0.4.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] / extract:@jest/types: \e[7msill\e[0m \e[35mextract\e[0m debug@2.6.9\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:request-promise-native: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/static-extend/-/static-extend-0.1.2.tgz 199ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:@jest/types: \e[7msill\e[0m \e[35mtarball\e[0m no local data for is-data-descriptor@1.0.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:set-value: \e[7msill\e[0m \e[35mtarball\e[0m no local data for node-notifier@6.0.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] - extract:source-map-support: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/source-map-url/-/source-map-url-0.4.0.tgz 293ms\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m         \e[27m\e[90m.........\e[0m] \\ extract:agent-base: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/snapdragon-node/-/snapdragon-node-2.1.1.tgz 257ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:@jest/source-map: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/is-descriptor/-/is-descriptor-1.0.2.tgz 221ms\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] | extract:set-blocking: \e[7msill\e[0m \e[35mtarball\e[0m no local data for ret@0.1.15. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] \\ extract:extend-shallow: \e[7msill\e[0m \e[35mextract\e[0m pretty-format@25.3.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] | extract:to-regex-range: \e[7msill\e[0m \e[35mextract\e[0m fill-range@4.0.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.st\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:require-main-filename: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.7.0.tgz 185ms\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] / extract:convert-source-map: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/capture-exit/-/capture-exit-2.0.0.tgz 216ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] \\ extract:import-local: \e[7msill\e[0m \e[35mextract\e[0m pretty-format@25.3.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] | extract:ret: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/request-promise-core/-/request-promise-core-1.1.3.tgz 248ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] \\ extract:process-nextick-args: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jest-diff/-/jest-diff-25.2.6.tgz 225ms\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] / extract:pify: \e[7msill\e[0m \e[35mtarball\e[0m no local data for onetime@5.1.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] / extract:path-key: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/anymatch/-/anymatch-3.1.1.tgz 185ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:source-map: \e[7msill\e[0m \e[35mtarball\e[0m no local data for node-int64@0.4.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 63
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] | extract:p-finally: \e[7msill\e[0m \e[35mtarball\e[0m no local data for natural-compare@1.4.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] \\ extract:define-property: \e[7msill\e[0m \e[35mextract\e[0m @cnakazawa/watch@1.0.4\e[0m\e[K\r"
+  - delay: 47
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:normalize-path: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @cnakazawa/watch@1.0.4. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] | extract:ms: \e[7msill\e[0m \e[35mtarball\e[0m no local data for make-error@1.3.6. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] | extract:semver: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz 245ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] / extract:mkdirp: \e[7msill\e[0m \e[35mextract\e[0m mime-types@2.1.26 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/m\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] - extract:lodash.union: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/map-cache/-/map-cache-0.2.2.tgz 175ms\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m          \e[27m\e[90m........\e[0m] \\ extract:define-property: \e[7msill\e[0m \e[35mextract\e[0m is-data-descriptor@1.0.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:define-property: \e[7msill\e[0m \e[35mextract\e[0m is-data-descriptor@1.0.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:minimist: \e[7msill\e[0m \e[35mtarball\e[0m no local data for jest-pnp-resolver@1.2.1. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:define-property: \e[7msill\e[0m \e[35mextract\e[0m define-property@2.0.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modul\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:color-name: \e[7msill\e[0m \e[35mextract\e[0m npm-run-path@4.0.1\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:jest-pnp-resolver: \e[7msill\e[0m \e[35mtarball\e[0m no local data for isobject@3.0.1. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:supports-color: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jest-get-type/-/jest-get-type-25.2.6.tgz 203ms\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:is-extendable: \e[7msill\e[0m \e[35mextract\e[0m kind-of@3.2.2\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:is-stream: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/is-plain-object/-/is-plain-object-2.0.4.tgz 167ms\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:is-plain-object: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/is-wsl/-/is-wsl-2.1.1.tgz 170ms\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:extend-shallow: \e[7msill\e[0m \e[35mextract\e[0m is-windows@1.0.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.st\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:extend-shallow: \e[7msill\e[0m \e[35mextract\e[0m is-windows@1.0.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.st\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:kind-of: \e[7msill\e[0m \e[35mextract\e[0m get-value@2.0.6\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] - extract:json-schema: \e[7msill\e[0m \e[35mextract\e[0m inherits@2.0.4 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] | extract:ms: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/has-values/-/has-values-1.0.0.tgz 302ms\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:ms: \e[7msill\e[0m \e[35mextract\e[0m buffer@5.5.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/buffer-58b\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] - extract:ip: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/growly/-/growly-1.3.0.tgz 237ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:fs.realpath: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/get-value/-/get-value-2.0.6.tgz 261ms\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:color-name: \e[7msill\e[0m \e[35mtarball\e[0m no local data for diff-sequences@25.2.6. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] / extract:har-schema: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/for-in/-/for-in-1.0.2.tgz 325ms\e[0m\e[K\r"
+  - delay: 62
+    content: "[\e[7m           \e[27m\e[90m.......\e[0m] \\ extract:es6-promisify: \e[7msill\e[0m \e[35mtarball\e[0m no local data for copy-descriptor@0.1.1. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:decamelize: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/detect-newline/-/detect-newline-3.1.0.tgz 157ms\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:crypt: \e[7msill\e[0m \e[35mtarball\e[0m no local data for @aws-cdk/aws-cloudwatch@1.32.2. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:cli-color: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/cssom/-/cssom-0.3.8.tgz 200ms\e[0m\e[K\r"
+  - delay: 68
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:core-util-is: \e[7msill\e[0m \e[35mextract\e[0m decode-uri-component@0.2.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mod\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:copy-descriptor: \e[7msill\e[0m \e[35mextract\e[0m esprima@3.1.3 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.stag\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:exit: \e[7msill\e[0m \e[35mextract\e[0m buffer-from@1.1.1\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:brace-expansion: \e[7msill\e[0m \e[35mextract\e[0m brace-expansion@1.1.11 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modu\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:color-name: \e[7msill\e[0m \e[35mtarball\e[0m no local data for browser-process-hrtime@1.0.0. Extracting by manifest.\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:bytes: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/collect-v8-coverage/-/collect-v8-coverage-1.0.1.tgz 213ms\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:callsites: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/browser-resolve/-/browser-resolve-1.11.3.tgz 182ms\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:balanced-match: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/jsdom/-/jsdom-15.2.1.tgz 6553ms\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:colors: \e[7msill\e[0m \e[35mextract\e[0m babel-preset-current-node-syntax@0.1.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/no\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:arg: \e[32;40mhttp\e[0m \e[35mfetch\e[0m GET 200 https://registry.npmjs.org/arr-diff/-/arr-diff-4.0.0.tgz 143ms\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:@aws-cdk/aws-sns: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-sns@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-kms: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-kms@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-events: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-events@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/n\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:cssstyle: \e[7msill\e[0m \e[35mextract\e[0m cssstyle@2.2.0 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/cs\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:constructs: \e[7msill\e[0m \e[35mextract\e[0m constructs@2.0.1 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.stagin\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:ast-types: \e[7msill\e[0m \e[35mextract\e[0m ast-types@0.13.3 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:@aws-cdk/aws-cloudwatch: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-cloudwatch@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneli\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:resolve: \e[7msill\e[0m \e[35mextract\e[0m resolve@1.1.7 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/reso\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:@aws-cdk/aws-iam: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-iam@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:@aws-cdk/aws-lambda: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-lambda@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/n\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:es5-ext: \e[7msill\e[0m \e[35mextract\e[0m es5-ext@0.8.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/es5-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:aws-cdk: \e[7msill\e[0m \e[35mextract\e[0m aws-cdk@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/aws\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ extract:@aws-cdk/core: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/core@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-ec2: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-ec2@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-ec2: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-ec2@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-ec2: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-ec2@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-ec2: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-ec2@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-ec2: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-ec2@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | extract:@aws-cdk/aws-ec2: \e[7msill\e[0m \e[35mextract\e[0m @aws-cdk/aws-ec2@1.32.2 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_mo\e[0m\e[K\r"
+  - delay: 46
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 48
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / extract:lodash: \e[7msill\e[0m \e[35mextract\e[0m lodash@4.17.15 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.staging/loda\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:typescript: \e[7msill\e[0m \e[35mextract\e[0m typescript@3.8.3 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.stagin\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - extract:typescript: \e[7msill\e[0m \e[35mextract\e[0m typescript@3.8.3 extracted to /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/.stagin\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / finalize:typescript: \e[7msill\e[0m \e[35mdoSerial\e[0m finalize 5880\e[0m\e[K\r"
+  - delay: 48
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / finalize:semver: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@aws-cdk/aws-s3-assets/node_modules/@aw\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - finalize:acorn-walk: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/acorn-walk\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - finalize:@aws-cdk/aws-sqs: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@aws-cdk/aws-sqs\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | finalize:html-escaper: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/html-escaper\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / finalize:has-flag: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jest-diff/node_modules/has-flag\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ finalize:merge-stream: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/merge-stream\e[0m\e[K\r"
+  - delay: 48
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / finalize:realpath-native: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/realpath-native\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - finalize:set-value: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/set-value\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ finalize:@jest/console: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@jest/console\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ finalize:@babel/helpers: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@babel/helpers\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ finalize:has-values: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/unset-value/node_modules/has-values\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | finalize:source-map: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/v8-to-istanbul/node_modules/source-\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / finalize:jsdom: \e[7msill\e[0m \e[35mfinalize\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jsdom\e[0m\e[K\r"
+  - delay: 67
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:typescript: \e[32;40mtiming\e[0m \e[35maction:finalize\e[0m Completed in 685ms\e[0m\e[K\r"
+  - delay: 79
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:typescript: \e[32;40mtiming\e[0m \e[35maction:finalize\e[0m Completed in 685ms\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:typescript: \e[32;40mtiming\e[0m \e[35maction:finalize\e[0m Completed in 685ms\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:semver: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jest-changed-fi\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:semver: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jest-changed-fi\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:@aws-cdk/assert: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/wrappy\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:execa: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/crc32-stream\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:archiver-utils: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/util-de\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:crc32-stream: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/levn\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / refresh-package-json:readable-stream: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/bcrypt\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:@sinonjs/commons: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/tmpl\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:sshpk: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/table/node_modul\e[0m\e[K\r"
+  - delay: 54
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / refresh-package-json:@babel/generator: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jest-\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / refresh-package-json:strip-ansi: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@jest/trans\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:@jest/types: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/request-pr\e[0m\e[K\r"
+  - delay: 44
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:pretty-format: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/snapdrag\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:@jest/types: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/prompts\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:socks: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/import-local\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / refresh-package-json:prompts: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jest-diff\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:require-main-filename: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:pretty-format: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/bser\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:picomatch: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/lodash.memoi\e[0m\e[K\r"
+  - delay: 58
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:define-property: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/define\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:debug: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jsesc\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:semver: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/jest-docblock\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:is-accessor-descriptor: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:semver: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/has-values/node\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:isobject: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/getpass\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ refresh-package-json:ip-regex: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/esutils\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:getpass: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/dashdash\e[0m\e[K\r"
+  - delay: 56
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:exec-sh: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/constructs\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | refresh-package-json:diff-sequences: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/camelca\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] / refresh-package-json:constructs: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/acorn-walk\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - refresh-package-json:base64-js: \e[7msill\e[0m \e[35mrefresh-package-json\e[0m /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@types/istan\e[0m\e[K\r"
+  - delay: 55
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] | preinstall:bcrypt-pbkdf: \e[32minfo\e[0m \e[35mlifecycle\e[0m emoji-regex@7.0.3~preinstall: emoji-regex@7.0.3\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - preinstall:bytes: \e[32minfo\e[0m \e[35mlifecycle\e[0m @types/istanbul-lib-report@3.0.0~preinstall: @types/istanbul-lib-report@3.0.0\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ build:@aws-cdk/cx-api: \e[7msill\e[0m \e[35mlinkStuff\e[0m @aws-cdk/cx-api@1.32.2 has /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules/@aws-\e[0m\e[K\r"
+  - delay: 52
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ build:abab: \e[7msill\e[0m \e[35mlinkStuff\e[0m abab@2.0.3 has /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules as its parent node_modules\e[0m\e[K\r"
+  - delay: 59
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - build:asynckit: \e[7msill\e[0m \e[35mlinkStuff\e[0m asynckit@0.4.0 has /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules as its parent node_m\e[0m\e[K\r"
+  - delay: 57
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - build:core-util-is: \e[7msill\e[0m \e[35mlinkStuff\e[0m core-util-is@1.0.2 has /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules as its paren\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] - build:minimist: \e[7msill\e[0m \e[35mlinkStuff\e[0m minimist@1.2.5 has /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules as its parent node_m\e[0m\e[K\r"
+  - delay: 53
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ build:tr46: \e[7msill\e[0m \e[35mlinkStuff\e[0m tr46@1.0.1 has /home/ubuntu/environment/iot-secure-tunneling/cdk/node_modules as its parent node_modules\e[0m\e[K\r"
+  - delay: 79
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ install:typescript: \e[7msill\e[0m \e[35mdoSerial\e[0m install 5880\e[0m\e[K\r"
+  - delay: 49
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ install:nice-try: \e[32minfo\e[0m \e[35mlifecycle\e[0m nice-try@1.0.5~install: nice-try@1.0.5\e[0m\e[K\r"
+  - delay: 66
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ postinstall:typescript: \e[7msill\e[0m \e[35mdoSerial\e[0m postinstall 5880\e[0m\e[K\r"
+  - delay: 51
+    content: "[\e[7m            \e[27m\e[90m......\e[0m] \\ postinstall:@jest/types: \e[32minfo\e[0m \e[35mlifecycle\e[0m @jest/types@25.3.0~postinstall: @jest/types@25.3.0\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m             \e[27m\e[90m.....\e[0m] / prepare:cdk: \e[32minfo\e[0m \e[35mlifecycle\e[0m aws-iot-sec-tunnel@0.1.0~prepare: aws-iot-sec-tunnel@0.1.0\e[0m\e[K\r"
+  - delay: 50
+    content: "[\e[7m             \e[27m\e[90m.....\e[0m] / prepare:cdk: \e[32minfo\e[0m \e[35mlifecycle\e[0m aws-iot-sec-tunnel@0.1.0~prepare: aws-iot-sec-tunnel@0.1.0\e[0m\e[K\r"
+  - delay: 14
+    content: "\r\e[K\e[?25h\e[37;40mnpm\e[0m \e[0m\e[30;43mWARN\e[0m\e[35m\e[0m aws-iot-sec-tunnel@0.1.0 No repository field.\r\n\e[0m\e[37;40mnpm\e[0m \e[0m\e[30;43mWARN\e[0m\e[35m\e[0m aws-iot-sec-tunnel@0.1.0 No license field.\r\n\e[0m\e[37;40mnpm\e[0m \e[0m\e[30;43mWARN\e[0m \e[0m\e[35moptional\e[0m SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules/fsevents):\r\n\e[0m\e[37;40mnpm\e[0m \e[0m\e[30;43mWARN\e[0m \e[0m\e[35mnotsup\e[0m SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {\"os\":\"darwin\",\"arch\":\"any\"} (current: {\"os\":\"linux\",\"arch\":\"x64\"})\r\n\e[0m\r\nadded 737 packages from 455 contributors and audited 250600 packages in 16.894s\r\n"
+  - delay: 50
+    content: "\r\n13 packages are looking for funding\r\n  run `npm fund` for details\r\n\r\nfound \e[92m0\e[0m vulnerabilities\r\n\r\n\e[?25l[\e[7m             \e[27m\e[90m.....\e[0m] / prepare:cdk: \e[7msill\e[0m \e[35minstall\e[0m printInstalled\e[0m\e[K\r"
+  - delay: 30
+    content: "\r\e[K\e[?25h"
+  - delay: 1500
+    content: "\e[32m ⏳  Bootstrapping environment \e[34maws://012345678901/us-east-1\e[32m...\e[39m\r\n"
+  - delay: 202
+    content: "\e[1mCDKToolkit\e[22m: creating CloudFormation changeset...\r\n"
+  - delay: 250
+    content: " 0/2 | 3:32:07 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::S3::BucketPolicy | \e[0m\e[1mStagingBucketPolicy\e[22m\e[0m \r\n"
+  - delay: 250
+    content: " 0/2 | 3:32:08 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::S3::BucketPolicy | \e[0m\e[1mStagingBucketPolicy\e[22m\e[0m \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 1/2 | 3:32:08 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::S3::BucketPolicy | \e[32m\e[1mStagingBucketPolicy\e[22m\e[39m \r\n 1/2 | 3:32:10 PM | \e[32mUPDATE_COMPLETE_CLEA\e[39m | AWS::CloudFormation::Stack | \e[32m\e[1mCDKToolkit\e[22m\e[39m \r\n 2/2 | 3:32:11 PM | \e[32mUPDATE_COMPLETE     \e[39m | AWS::CloudFormation::Stack | \e[32m\e[1mCDKToolkit\e[22m\e[39m \r\n"
+  - delay: 74
+    content: "\e[32m ✅  Environment \e[34maws://012345678901/us-east-1\e[32m bootstrapped.\e[39m\r\n"
+  - delay: 250
+    content: "\r\n> aws-iot-sec-tunnel@0.1.0 build /home/ubuntu/environment/iot-secure-tunneling/cdk\r\n> tsc\r\n\r\n"
+  - delay: 250
+    content: "\e[1mAwsIotSecTunnelStack\e[22m: deploying...\r\n"
+  - delay: 250
+    content: "\e[1mAwsIotSecTunnelStack\e[22m: creating CloudFormation changeset...\r\n"
+  - delay: 250
+    content: "  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::VPC                         | \e[0m\e[1miotSecureTunneling\e[22m\e[0m (iotSecureTunneling1EF7EF05) \r\n  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::IAM::Role                        | \e[0m\e[1mssminstancerole\e[22m\e[0m (ssminstanceroleC712CFDC) \r\n  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::S3::Bucket                       | \e[0m\e[1maws-secure-tunneling-demo\e[22m\e[0m (awssecuretunnelingdemoBC52C7AD) \r\n  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::EIP                         | \e[0m\e[1miotSecureTunneling/PublicSubnet1/EIP\e[22m\e[0m (iotSecureTunnelingPublicSubnet1EIP7F6054EE) \r\n  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::EIP                         | \e[0m\e[1miotSecureTunneling/PublicSubnet2/EIP\e[22m\e[0m (iotSecureTunnelingPublicSubnet2EIP48A46B19) \r\n  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::InternetGateway             | \e[0m\e[1miotSecureTunneling/IGW\e[22m\e[0m (iotSecureTunnelingIGWD7044CBA) \r\n  0/29 | 3:33:02 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::VPC                         | \e[0m\e[1miotSecureTunneling\e[22m\e[0m (iotSecureTunneling1EF7EF05) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  0/29 | 3:33:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::IAM::Role                        | \e[0m\e[1mssminstancerole\e[22m\e[0m (ssminstanceroleC712CFDC) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  0/29 | 3:33:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::CDK::Metadata                    | \e[0m\e[1mCDKMetadata\e[22m\e[0m \r\n  0/29 | 3:33:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::EIP                         | \e[0m\e[1miotSecureTunneling/PublicSubnet1/EIP\e[22m\e[0m (iotSecureTunnelingPublicSubnet1EIP7F6054EE) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  0/29 | 3:33:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::EIP                         | \e[0m\e[1miotSecureTunneling/PublicSubnet2/EIP\e[22m\e[0m (iotSecureTunnelingPublicSubnet2EIP48A46B19) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  0/29 | 3:33:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::S3::Bucket                       | \e[0m\e[1maws-secure-tunneling-demo\e[22m\e[0m (awssecuretunnelingdemoBC52C7AD) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  0/29 | 3:33:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::InternetGateway             | \e[0m\e[1miotSecureTunneling/IGW\e[22m\e[0m (iotSecureTunnelingIGWD7044CBA) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  0/29 | 3:33:05 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::CDK::Metadata                    | \e[0m\e[1mCDKMetadata\e[22m\e[0m \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  1/29 | 3:33:05 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::CDK::Metadata                    | \e[32m\e[1mCDKMetadata\e[22m\e[39m \r\n"
+  - delay: 250
+    content: "  2/29 | 3:33:15 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::IAM::Role                        | \e[32m\e[1mssminstancerole\e[22m\e[39m (ssminstanceroleC712CFDC) \r\n"
+  - delay: 250
+    content: "  2/29 | 3:33:17 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::IAM::InstanceProfile             | \e[0m\e[1msecureTunnelProfile\e[22m\e[0m \r\n  2/29 | 3:33:18 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::IAM::InstanceProfile             | \e[0m\e[1msecureTunnelProfile\e[22m\e[0m \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  3/29 | 3:33:19 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::EIP                         | \e[32m\e[1miotSecureTunneling/PublicSubnet1/EIP\e[22m\e[39m (iotSecureTunnelingPublicSubnet1EIP7F6054EE) \r\n  4/29 | 3:33:19 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::InternetGateway             | \e[32m\e[1miotSecureTunneling/IGW\e[22m\e[39m (iotSecureTunnelingIGWD7044CBA) \r\n  5/29 | 3:33:19 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::VPC                         | \e[32m\e[1miotSecureTunneling\e[22m\e[39m (iotSecureTunneling1EF7EF05) \r\n  6/29 | 3:33:19 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::EIP                         | \e[32m\e[1miotSecureTunneling/PublicSubnet2/EIP\e[22m\e[39m (iotSecureTunnelingPublicSubnet2EIP48A46B19) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PublicSubnet2/RouteTable\e[22m\e[0m (iotSecureTunnelingPublicSubnet2RouteTable68CCFBD3) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/RouteTable\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2RouteTable16514F7F) \r\n"
+  - delay: 250
+    content: "  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/Subnet\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2Subnet940C3ACB) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/Subnet\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1SubnetCBF0CF52) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PublicSubnet1/RouteTable\e[22m\e[0m (iotSecureTunnelingPublicSubnet1RouteTable430E5EF2) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::VPCGatewayAttachment        | \e[0m\e[1miotSecureTunneling/VPCGW\e[22m\e[0m (iotSecureTunnelingVPCGWEB83A4DC) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PublicSubnet2/Subnet\e[22m\e[0m (iotSecureTunnelingPublicSubnet2Subnet641A6D03) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/RouteTable\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1RouteTableB329BC9D) \r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PublicSubnet2/RouteTable\e[22m\e[0m (iotSecureTunnelingPublicSubnet2RouteTable68CCFBD3) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/RouteTable\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2RouteTable16514F7F) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PublicSubnet1/Subnet\e[22m\e[0m (iotSecureTunnelingPublicSubnet1Subnet1C1ABA59) \r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::VPCGatewayAttachment        | \e[0m\e[1miotSecureTunneling/VPCGW\e[22m\e[0m (iotSecureTunnelingVPCGWEB83A4DC) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PublicSubnet1/RouteTable\e[22m\e[0m (iotSecureTunnelingPublicSubnet1RouteTable430E5EF2) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::RouteTable                  | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/RouteTable\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1RouteTableB329BC9D) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PublicSubnet2/Subnet\e[22m\e[0m (iotSecureTunnelingPublicSubnet2Subnet641A6D03) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/Subnet\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2Subnet940C3ACB) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/Subnet\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1SubnetCBF0CF52) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  6/29 | 3:33:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Subnet                      | \e[0m\e[1miotSecureTunneling/PublicSubnet1/Subnet\e[22m\e[0m (iotSecureTunnelingPublicSubnet1Subnet1C1ABA59) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n  7/29 | 3:33:22 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PublicSubnet2/RouteTable\e[22m\e[39m (iotSecureTunnelingPublicSubnet2RouteTable68CCFBD3) \r\n  8/29 | 3:33:23 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PublicSubnet1/RouteTable\e[22m\e[39m (iotSecureTunnelingPublicSubnet1RouteTable430E5EF2) \r\n  9/29 | 3:33:23 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/RouteTable\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2RouteTable16514F7F) \r\n 10/29 | 3:33:23 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::RouteTable                  | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/RouteTable\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1RouteTableB329BC9D) \r\n 11/29 | 3:33:24 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::S3::Bucket                       | \e[32m\e[1maws-secure-tunneling-demo\e[22m\e[39m (awssecuretunnelingdemoBC52C7AD) \r\n"
+  - delay: 250
+    content: " 12/29 | 3:33:37 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::VPCGatewayAttachment        | \e[32m\e[1miotSecureTunneling/VPCGW\e[22m\e[39m (iotSecureTunnelingVPCGWEB83A4DC) \r\n 13/29 | 3:33:38 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PublicSubnet2/Subnet\e[22m\e[39m (iotSecureTunnelingPublicSubnet2Subnet641A6D03) \r\n 14/29 | 3:33:38 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PublicSubnet1/Subnet\e[22m\e[39m (iotSecureTunnelingPublicSubnet1Subnet1C1ABA59) \r\n 15/29 | 3:33:38 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/Subnet\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2Subnet940C3ACB) \r\n 16/29 | 3:33:38 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Subnet                      | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/Subnet\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1SubnetCBF0CF52) \r\n 16/29 | 3:33:39 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PublicSubnet1/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPublicSubnet1DefaultRoute142EFE20) \r\n 16/29 | 3:33:39 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PublicSubnet2/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPublicSubnet2DefaultRoute96937F81) \r\n 16/29 | 3:33:40 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PublicSubnet1/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPublicSubnet1DefaultRoute142EFE20) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:40 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PublicSubnet2/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPublicSubnet2DefaultRoute96937F81) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:40 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::NatGateway                  | \e[0m\e[1miotSecureTunneling/PublicSubnet2/NATGateway\e[22m\e[0m (iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5) \r\n 16/29 | 3:33:40 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PublicSubnet2/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPublicSubnet2RouteTableAssociation65635D75) \r\n 16/29 | 3:33:40 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::NatGateway                  | \e[0m\e[1miotSecureTunneling/PublicSubnet1/NATGateway\e[22m\e[0m (iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84) \r\n 16/29 | 3:33:40 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2RouteTableAssociation8F92C10A) \r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PublicSubnet1/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPublicSubnet1RouteTableAssociation3D66FE6A) \r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1RouteTableAssociation6703345A) \r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::NatGateway                  | \e[0m\e[1miotSecureTunneling/PublicSubnet2/NATGateway\e[22m\e[0m (iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PublicSubnet2/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPublicSubnet2RouteTableAssociation65635D75) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2RouteTableAssociation8F92C10A) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::NatGateway                  | \e[0m\e[1miotSecureTunneling/PublicSubnet1/NATGateway\e[22m\e[0m (iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PublicSubnet1/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPublicSubnet1RouteTableAssociation3D66FE6A) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n 16/29 | 3:33:41 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::SubnetRouteTableAssociation | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/RouteTableAssociation\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1RouteTableAssociation6703345A) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n"
+  - delay: 250
+    content: " 17/29 | 3:33:55 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PublicSubnet1/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPublicSubnet1DefaultRoute142EFE20) \r\n 18/29 | 3:33:55 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PublicSubnet2/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPublicSubnet2DefaultRoute96937F81) \r\n 19/29 | 3:33:57 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2RouteTableAssociation8F92C10A) \r\n 20/29 | 3:33:57 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PublicSubnet2/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPublicSubnet2RouteTableAssociation65635D75) \r\n 21/29 | 3:33:57 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PublicSubnet1/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPublicSubnet1RouteTableAssociation3D66FE6A) \r\n"
+  - delay: 250
+    content: " 22/29 | 3:33:57 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::SubnetRouteTableAssociation | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/RouteTableAssociation\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1RouteTableAssociation6703345A) \r\n"
+  - delay: 250
+    content: "22/29 Currently in progress: \e[1msecureTunnelProfile, iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5, iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84\e[22m\r\n"
+  - delay: 250
+    content: " 23/29 | 3:35:14 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::NatGateway                  | \e[32m\e[1miotSecureTunneling/PublicSubnet2/NATGateway\e[22m\e[39m (iotSecureTunnelingPublicSubnet2NATGateway2EE6A8D5) \r\n"
+  - delay: 250
+    content: " 23/29 | 3:35:18 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2DefaultRoute3AE41EE8) \r\n 24/29 | 3:35:18 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::IAM::InstanceProfile             | \e[32m\e[1msecureTunnelProfile\e[22m\e[39m \r\n 24/29 | 3:35:19 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PrivateSubnet2/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPrivateSubnet2DefaultRoute3AE41EE8) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n"
+  - delay: 250
+    content: " 24/29 | 3:35:21 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Instance                    | \e[0m\e[1mdevice\e[22m\e[0m \r\n 24/29 | 3:35:22 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Instance                    | \e[0m\e[1mdevice\e[22m\e[0m \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n"
+  - delay: 250
+    content: " 25/29 | 3:35:34 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PrivateSubnet2/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPrivateSubnet2DefaultRoute3AE41EE8) \r\n"
+  - delay: 250
+    content: " 26/29 | 3:35:55 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Instance                    | \e[32m\e[1mdevice\e[22m\e[39m \r\n"
+  - delay: 250
+    content: " 27/29 | 3:36:00 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::NatGateway                  | \e[32m\e[1miotSecureTunneling/PublicSubnet1/NATGateway\e[22m\e[39m (iotSecureTunnelingPublicSubnet1NATGatewayAAA73F84) \r\n 27/29 | 3:36:03 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1DefaultRoute7F5B14C3) \r\n 27/29 | 3:36:04 PM | \e[0mCREATE_IN_PROGRESS  \e[0m | AWS::EC2::Route                       | \e[0m\e[1miotSecureTunneling/PrivateSubnet1/DefaultRoute\e[22m\e[0m (iotSecureTunnelingPrivateSubnet1DefaultRoute7F5B14C3) \e[36m\e[1mResource creation Initiated\e[22m\e[39m\r\n"
+  - delay: 250
+    content: " 28/29 | 3:36:19 PM | \e[32mCREATE_COMPLETE     \e[39m | AWS::EC2::Route                       | \e[32m\e[1miotSecureTunneling/PrivateSubnet1/DefaultRoute\e[22m\e[39m (iotSecureTunnelingPrivateSubnet1DefaultRoute7F5B14C3) \r\n"
+  - delay: 250
+    content: "\e[32m\e[39m\r\n\e[32m ✅  AwsIotSecTunnelStack\e[39m\r\n\r\nOutputs:\r\n\e[36mAwsIotSecTunnelStack\e[39m.\e[36ms3BucketName\e[39m = \e[4m\e[36mawsiotsectunnelstack-awssecuretunnelingdemobc52c7-1t4mwwjdw1af2\e[39m\e[24m\r\n\r\nStack ARN:\r\narn:aws:cloudformation:us-east-1:012345678901:stack/AwsIotSecTunnelStack/fcbba420-7d9b-11ea-a42e-12b6a099270b\r\n"
+  - delay: 9
+    content: "\r\n################################################################################\r\n#                  Uploading the demo configuration to S3...                   #\r\n################################################################################\r\n"
+  - delay: 500
+    content: "Uploading configuration files from s3...\r\n"
+  - delay: 250
+    content: "Successfully uploaded all configurations from S3\r\n\r\nSuccessfully deployed the demo.\r\n"
+  - delay: 30
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment/iot-secure-tunneling\e[00m (master) $ "
+  - delay: 10000
+    content: " "

@@ -1,0 +1,147 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/ubuntu/environment
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 120
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 22
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 1
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Cloning our GitHub repo
+    style:
+      border: 0px black solid
+      boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 712
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 2000
+    content: >-
+      git clone https://github.com/marcosortiz/aws-iot-secure-tunneling.git
+      iot-secure-tunneling
+  - delay: 284
+    content: "\r\nCloning into 'iot-secure-tunneling'...\r\n"
+  - delay: 602
+    content: "remote: Enumerating objects: 36, done.\e[K\r\nremote: Counting objects:   2% (1/36)\e[K\rremote: Counting objects:   5% (2/36)\e[K\rremote: Counting objects:   8% (3/36)\e[K\rremote: Counting objects:  11% (4/36)\e[K\rremote: Counting objects:  13% (5/36)\e[K\rremote: Counting objects:  16% (6/36)\e[K\rremote: Counting objects:  19% (7/36)\e[K\rremote: Counting objects:  22% (8/36)\e[K\rremote: Counting objects:  25% (9/36)\e[K\rremote: Counting objects:  27% (10/36)\e[K\rremote: Counting objects:  30% (11/36)\e[K\rremote: Counting objects:  33% (12/36)\e[K\rremote: Counting objects:  36% (13/36)\e[K\rremote: Counting objects:  38% (14/36)\e[K\rremote: Counting objects:  41% (15/36)\e[K\rremote: Counting objects:  44% (16/36)\e[K\rremote: Counting objects:  47% (17/36)\e[K\rremote: Counting objects:  50% (18/36)\e[K\rremote: Counting objects:  52% (19/36)\e[K\rremote: Counting objects:  55% (20/36)\e[K\rremote: Counting objects:  58% (21/36)\e[K\rremote: Counting objects:  61% (22/36)\e[K\rremote: Counting objects:  63% (23/36)\e[K\rremote: Counting objects:  66% (24/36)\e[K\rremote: Counting objects:  69% (25/36)\e[K\rremote: Counting objects:  72% (26/36)\e[K\rremote: Counting objects:  75% (27/36)\e[K\rremote: Counting objects:  77% (28/36)\e[K\rremote: Counting objects:  80% (29/36)\e[K\rremote: Counting objects:  83% (30/36)\e[K\rremote: Counting objects:  86% (31/36)\e[K\rremote: Counting objects:  88% (32/36)\e[K\rremote: Counting objects:  91% (33/36)\e[K\rremote: Counting objects:  94% (34/36)\e[K\rremote: Counting objects:  97% (35/36)\e[K\rremote: Counting objects: 100% (36/36)\e[K\rremote: Counting objects: 100% (36/36), done.\e[K\r\nremote: Compressing objects:   3% (1/26)\e[K\rremote: Compressing objects:   7% (2/26)\e[K\rremote: Compressing objects:  11% (3/26)\e[K\rremote: Compressing objects:  15% (4/26)\e[K\rremote: Compressing objects:  19% (5/26)\e[K\rremote: Compressing objects:  23% (6/26)\e[K\rremote: Compressing objects:  26% (7/26)\e[K\rremote: Compressing objects:  30% (8/26)\e[K\rremote: Compressing objects:  34% (9/26)\e[K\rremote: Compressing objects:  38% (10/26)\e[K\rremote: Compressing objects:  42% (11/26)\e[K\rremote: Compressing objects:  46% (12/26)\e[K\rremote: Compressing objects:  50% (13/26)\e[K\rremote: Compressing objects:  53% (14/26)\e[K\rremote: Compressing objects:  57% (15/26)\e[K\rremote: Compressing objects:  61% (16/26)\e[K\rremote: Compressing objects:  65% (17/26)\e[K\rremote: Compressing objects:  69% (18/26)\e[K\rremote: Compressing objects:  73% (19/26)\e[K\rremote: Compressing objects:  76% (20/26)\e[K\rremote: Compressing objects:  80% (21/26)\e[K\rremote: Compressing objects:  84% (22/26)\e[K\rremote: Compressing objects:  88% (23/26)\e[K\rremote: Compressing objects:  92% (24/26)\e[K\rremote: Compressing objects:  96% (25/26)\e[K\rremote: Compressing objects: 100% (26/26)\e[K\rremote: Compressing objects: 100% (26/26), done.\e[K\r\nReceiving objects:   0% (1/498)   \rReceiving objects:   1% (5/498)   \rReceiving objects:   2% (10/498)   \rReceiving objects:   3% (15/498)   \rReceiving objects:   4% (20/498)   \rReceiving objects:   5% (25/498)   \rReceiving objects:   6% (30/498)   \rReceiving objects:   7% (35/498)   \rReceiving objects:   8% (40/498)   \rReceiving objects:   9% (45/498)   \rReceiving objects:  10% (50/498)   \rReceiving objects:  11% (55/498)   \rReceiving objects:  12% (60/498)   \rReceiving objects:  13% (65/498)   \rReceiving objects:  14% (70/498)   \rReceiving objects:  15% (75/498)   \rReceiving objects:  16% (80/498)   \rReceiving objects:  17% (85/498)   \rReceiving objects:  18% (90/498)   \rReceiving objects:  19% (95/498)   \rReceiving objects:  20% (100/498)   \rReceiving objects:  21% (105/498)   \rReceiving objects:  22% (110/498)   \rReceiving objects:  23% (115/498)   \rReceiving objects:  24% (120/498)   \rReceiving objects:  25% (125/498)   \rReceiving objects:  26% (130/498)   \r"
+  - delay: 136
+    content: "Receiving objects:  27% (135/498)   \rReceiving objects:  28% (140/498)   \rReceiving objects:  29% (145/498)   \rReceiving objects:  30% (150/498)   \rReceiving objects:  31% (155/498)   \r"
+  - delay: 5
+    content: "Receiving objects:  32% (160/498)   \rReceiving objects:  33% (165/498)   \rReceiving objects:  34% (170/498)   \rReceiving objects:  35% (175/498)   \rReceiving objects:  36% (180/498)   \rReceiving objects:  37% (185/498)   \rReceiving objects:  38% (190/498)   \r"
+  - delay: 26
+    content: "Receiving objects:  39% (195/498)   \rReceiving objects:  40% (200/498)   \rReceiving objects:  41% (205/498)   \rReceiving objects:  42% (210/498)   \rReceiving objects:  43% (215/498)   \rReceiving objects:  44% (220/498)   \rReceiving objects:  45% (225/498)   \rReceiving objects:  46% (230/498)   \rReceiving objects:  47% (235/498)   \rReceiving objects:  48% (240/498)   \rReceiving objects:  49% (245/498)   \rReceiving objects:  50% (249/498)   \rReceiving objects:  51% (254/498)   \rReceiving objects:  52% (259/498)   \rReceiving objects:  53% (264/498)   \rReceiving objects:  54% (269/498)   \rReceiving objects:  55% (274/498)   \rReceiving objects:  56% (279/498)   \rReceiving objects:  57% (284/498)   \rReceiving objects:  58% (289/498)   \rReceiving objects:  59% (294/498)   \rReceiving objects:  60% (299/498)   \rReceiving objects:  61% (304/498)   \rReceiving objects:  62% (309/498)   \rReceiving objects:  63% (314/498)   \rReceiving objects:  64% (319/498)   \rReceiving objects:  65% (324/498)   \rReceiving objects:  66% (329/498)   \rReceiving objects:  67% (334/498)   \rReceiving objects:  68% (339/498)   \rReceiving objects:  69% (344/498)   \rReceiving objects:  70% (349/498)   \rReceiving objects:  71% (354/498)   \rReceiving objects:  72% (359/498)   \rReceiving objects:  73% (364/498)   \rReceiving objects:  74% (369/498)   \rReceiving objects:  75% (374/498)   \rReceiving objects:  76% (379/498)   \rReceiving objects:  77% (384/498)   \rReceiving objects:  78% (389/498)   \rReceiving objects:  79% (394/498)   \rReceiving objects:  80% (399/498)   \r"
+  - delay: 25
+    content: "Receiving objects:  81% (404/498)   \r"
+  - delay: 269
+    content: "Receiving objects:  82% (409/498)   \r"
+  - delay: 17
+    content: "Receiving objects:  83% (414/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  84% (419/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  85% (424/498), 12.67 MiB | 25.34 MiB/s   \r"
+  - delay: 213
+    content: "remote: Total 498 (delta 21), reused 22 (delta 10), pack-reused 462\e[K\r\nReceiving objects:  86% (429/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  87% (434/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  88% (439/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  89% (444/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  90% (449/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  91% (454/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  92% (459/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  93% (464/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  94% (469/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  95% (474/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  96% (479/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  97% (484/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  98% (489/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects:  99% (494/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects: 100% (498/498), 12.67 MiB | 25.34 MiB/s   \rReceiving objects: 100% (498/498), 20.06 MiB | 27.58 MiB/s, done.\r\nResolving deltas:   0% (0/254)   \rResolving deltas:  10% (26/254)   \rResolving deltas:  11% (28/254)   \rResolving deltas:  12% (33/254)   \rResolving deltas:  16% (43/254)   \rResolving deltas:  17% (44/254)   \rResolving deltas:  19% (50/254)   \rResolving deltas:  20% (53/254)   \rResolving deltas:  24% (61/254)   \rResolving deltas:  25% (64/254)   \r"
+  - delay: 78
+    content: "Resolving deltas:  26% (68/254)   \rResolving deltas:  33% (84/254)   \rResolving deltas:  38% (97/254)   \rResolving deltas:  42% (109/254)   \rResolving deltas:  46% (119/254)   \r"
+  - delay: 8
+    content: "Resolving deltas:  50% (127/254)   \rResolving deltas:  51% (130/254)   \rResolving deltas:  52% (133/254)   \rResolving deltas:  53% (135/254)   \rResolving deltas:  56% (144/254)   \rResolving deltas:  60% (153/254)   \rResolving deltas:  63% (162/254)   \r"
+  - delay: 7
+    content: "Resolving deltas:  64% (163/254)   \rResolving deltas:  69% (176/254)   \rResolving deltas:  70% (179/254)   \rResolving deltas:  73% (187/254)   \rResolving deltas:  77% (196/254)   \rResolving deltas:  82% (210/254)   \rResolving deltas:  87% (223/254)   \rResolving deltas:  88% (224/254)   \rResolving deltas:  89% (228/254)   \rResolving deltas:  90% (229/254)   \rResolving deltas:  91% (232/254)   \rResolving deltas:  94% (239/254)   \rResolving deltas:  95% (242/254)   \rResolving deltas:  96% (244/254)   \rResolving deltas:  99% (252/254)   \rResolving deltas: 100% (254/254)   \rResolving deltas: 100% (254/254), done.\r\n"
+  - delay: 250
+    content: "\e[01;32mAdmin\e[00m:\e[01;34m~/environment\e[00m $ "
+  - delay: 2000
+    content: " "
