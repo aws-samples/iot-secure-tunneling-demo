@@ -71,7 +71,7 @@ cd ~/environment/iot-secure-tunneling/
 ./bin/ssh/connect.sh
 pwd
 ls
-cd aws-iot-secure-tunneling
+cd iot-secure-tunneling-demo
 tail -100 logs/device-agent.log
 exit
 ```

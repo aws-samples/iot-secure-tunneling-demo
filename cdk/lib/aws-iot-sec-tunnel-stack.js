@@ -47,10 +47,10 @@ apt-get -y install build-essential g++ tmux nodejs npm git jq awscli
           
 cd /home/ubuntu
 su - ubuntu -c 'git clone https://github.com/aws-samples/iot-secure-tunneling-demo.git'
-cd /home/ubuntu/aws-iot-secure-tunneling
-su - ubuntu -c 'cd /home/ubuntu/aws-iot-secure-tunneling && git checkout dev'
-su - ubuntu -c 'cd /home/ubuntu/aws-iot-secure-tunneling/device-agent && npm install'
-su - ubuntu -c 'cd /home/ubuntu/aws-iot-secure-tunneling && ./bin/device-agent/run.sh'`)
+cd /home/ubuntu/iot-secure-tunneling-demo
+su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && git checkout dev'
+su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/device-agent && npm install'
+su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/device-agent/run.sh'`)
         });
         let s3Bucket = new s3.Bucket(this, 'aws-secure-tunneling-demo');
         new cdk.CfnOutput(this, 's3BucketName', {
