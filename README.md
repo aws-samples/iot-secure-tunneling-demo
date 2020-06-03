@@ -4,7 +4,7 @@ The intent of this demo is to enable you to quickly test the [AWS IoT Secure Tun
 
 On this demo, you will establish bidirectional communication to remote devices over a secure connection that is managed by AWS IoT. Secure tunneling does not require updates to your existing inbound firewall rule, so you can keep the same security level provided by firewall rules at a remote site. The picture below illustrate how this demo works:
 
-![](https://github.com/marcosortiz/aws-iot-secure-tunneling/blob/docs/imgs/demo-overall-arch.png)
+![](https://github.com/aws-samples/iot-secure-tunneling-demo/blob/docs/imgs/demo-overall-arch.png)
 
 1. First, we will create an AWS Cloud9 environment, from where you will run this demo.
 2. We will use the AWS CLI to provision the AWS IoT Core resources needed for this workshop: an iot thing, certificate and policy.
