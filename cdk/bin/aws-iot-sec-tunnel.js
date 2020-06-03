@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const cdk = require("@aws-cdk/core");
+const aws_iot_sec_tunnel_stack_1 = require("../lib/aws-iot-sec-tunnel-stack");
+const app = new cdk.App();
+new aws_iot_sec_tunnel_stack_1.AwsIotSecTunnelStack(app, 'AwsIotSecTunnelStack');
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXdzLWlvdC1zZWMtdHVubmVsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYXdzLWlvdC1zZWMtdHVubmVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLHFDQUFzQztBQUN0Qyw4RUFBdUU7QUFFdkUsTUFBTSxHQUFHLEdBQUcsSUFBSSxHQUFHLENBQUMsR0FBRyxFQUFFLENBQUM7QUFDMUIsSUFBSSwrQ0FBb0IsQ0FBQyxHQUFHLEVBQUUsc0JBQXNCLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIiMhL3Vzci9iaW4vZW52IG5vZGVcbmltcG9ydCBjZGsgPSByZXF1aXJlKCdAYXdzLWNkay9jb3JlJyk7XG5pbXBvcnQgeyBBd3NJb3RTZWNUdW5uZWxTdGFjayB9IGZyb20gJy4uL2xpYi9hd3MtaW90LXNlYy10dW5uZWwtc3RhY2snO1xuXG5jb25zdCBhcHAgPSBuZXcgY2RrLkFwcCgpO1xubmV3IEF3c0lvdFNlY1R1bm5lbFN0YWNrKGFwcCwgJ0F3c0lvdFNlY1R1bm5lbFN0YWNrJyk7Il19

@@ -1,0 +1,7 @@
+**/node_modules/
+.vscode/*
+**/cdk.out/
+**/.DS_Store
+**/cdk.context.json
+config
+logs
