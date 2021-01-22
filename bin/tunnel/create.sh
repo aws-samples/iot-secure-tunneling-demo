@@ -8,7 +8,7 @@ THING_NAME=$(jq -r ".thingName" $IOT_RESOURCES_PATH/thing.json)
 # Creating tunnel
 echo "[1/2] Creating tunnel on AWS IoT..."
 aws iotsecuretunneling open-tunnel \
---destination-config thingName=$THING_NAME,services=ssh \
+--destination-config thingName=$THING_NAME,services=HTTP1,SSH1 \
 > $IOT_RESOURCES_PATH/tunnel.json
 
 # Uploading tunnel info S3
