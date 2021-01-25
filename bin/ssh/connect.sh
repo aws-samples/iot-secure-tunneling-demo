@@ -4,7 +4,7 @@ CONFIG_PATH=$mydir/../../config
 EC2_RESOURCES_PATH=$CONFIG_PATH/ec2
 
 EC2_KEY_NAME=$(jq -r ".KeyName" $EC2_RESOURCES_PATH/key-pair.json)
-PORT=5555
+PORT=3333
 
 ssh -o StrictHostKeyChecking=no \
 -o UserKnownHostsFile=/dev/null \
