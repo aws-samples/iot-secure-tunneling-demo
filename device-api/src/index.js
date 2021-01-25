@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-const port = 5555;
+const port = 8089;
 
 app.get('/', (req, res) => {
  res.status(200).send(`Hello World! Our IOT Device HTTP server is running on port ${port}`);
