@@ -1,16 +1,78 @@
 var fs = require('fs');
 var path = require('path');
 var iot = require('aws-iot-device-sdk');
+var AWS = require('aws-sdk');
+var superagent = require("superagent")
+
 const { spawn } = require('child_process');
 const Logger = require(`${__dirname}/logger`);
 
+let logger = Logger.getLogger('device-agent');
+let configPath = path.join(__dirname, '..', '..','config')
+
+var endpointConfig = require(`${configPath}/iot/resources/endpoint.json`);
+const host = endpointConfig.endpointAddress
+const localproxypath = path.join(__dirname, '..', '..','build', 'ubuntu18', 'localproxy');
+
+getInstanceName().then(name => {
+    
+    var thingName = name;
+    
+    let params = {
+        keyPath: path.join(__dirname, '..', '..', 'config', 'iot', 'certs', `${thingName}`, `${thingName}.private.key`),
+        certPath: path.join(__dirname,  '..', '..', 'config', 'iot', 'certs', `${thingName}`, `${thingName}.certificate.pem`),
+        caPath: path.join(__dirname,  '..', '..', 'config', 'iot', 'certs', 'root.ca.bundle.pem'),
+        clientId: thingName,
+        host: host
+    }
+    
+    console.log(params.keyPath)
+    
+    //let device = iot.device(params);
+    
+})
+
+function getInstanceName() {
+    return new Promise(function(resolve, reject) {
+       getInstanceIdentityDocument().then(id => {
+         AWS.config.update({region: id.region });
+
+        var ec2 = new AWS.EC2();
+    
+        var params = {
+              Filters: [
+                 {
+                Name: "resource-id", 
+                Values: [id.instanceId]
+               }
+              ]
+        };
+     
+        ec2.describeTags(params, function(err, data) {
+         if (err) reject(err);
+         else {
+            resolve(data.Tags.filter(d => d.Key === 'Name')[0].ResourceId);
+         }
+        });
+       }) 
+    });
+}
+
+function getInstanceIdentityDocument() {
+    
+    return new Promise(function(resolve, reject) {
+        superagent.get("http://169.254.169.254/latest/dynamic/instance-identity/document").then(r => {
+            return resolve(JSON.parse(r.text));
+        }).catch(reject);    
+    })
+}
+
+/*
 let configPath = path.join(__dirname, '..', '..','config')
 var thingConfig = require(`${configPath}/iot/resources/thing.json`);
 var endpointConfig = require(`${configPath}/iot/resources/endpoint.json`);
 
 const thingName = thingConfig.thingName
-const host = endpointConfig.endpointAddress
-const localproxypath = path.join(__dirname, '..', '..','build', 'ubuntu18', 'localproxy');
 
 let logger = Logger.getLogger('device-agent');
 let argIotOptions = {
@@ -20,14 +82,7 @@ let argIotOptions = {
     verbose: 5
 }
 
-let params = {
-    keyPath: path.join(__dirname, '..', '..', 'config', 'iot', 'certs', `${thingName}.private.key`),
-    certPath: path.join(__dirname,  '..', '..', 'config', 'iot', 'certs', `${thingName}.certificate.pem`),
-    caPath: path.join(__dirname,  '..', '..', 'config', 'iot', 'certs', 'root.ca.bundle.pem'),
-    clientId: thingName,
-    host: host
- }
-let device = iot.device(params);
+
 
  device.on('connect', function() {
     logger.info('Connected!');
@@ -82,3 +137,4 @@ const calliotagent = () => {
     })
 
 }
+*/
