@@ -5,6 +5,8 @@ import {InstanceClass,InstanceSize,InstanceType} from '@aws-cdk/aws-ec2';
 import iam = require('@aws-cdk/aws-iam');
 import cdk = require('@aws-cdk/core');
 import s3 = require('@aws-cdk/aws-s3');
+import thing = require('./constructs/thing-construct')
+import * as configJson from "../../config/config.json"
 
 let keyConfig = require(`${__dirname}/../../config/ec2/key-pair.json`);
 
@@ -47,49 +49,25 @@ export class AwsIotSecTunnelStack extends cdk.Stack {
       name: 'ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200112',
     }).getImage(this).imageId;
     
-    let device = new ec2.CfnInstance(this, "device",{
-      imageId: ubuntuAmi,
-      instanceType: InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO).toString(),
-      iamInstanceProfile: secureTunnelInstanceProfile.ref,
-      keyName: KEY_NAME,
-      subnetId: deviceVpc.publicSubnets[0].subnetId,
-      tags: [{key: "Name", value: "iot-secure-tunnel-demo-device"}],
-      userData: cdk.Fn.base64(`#!/bin/bash
-apt-get -y update
-apt-get -y install build-essential g++ tmux nodejs npm git jq awscli
-          
-cd /home/ubuntu
-su - ubuntu -c 'git clone ` + githubRepoUrl.valueAsString + `'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/device-agent && npm install'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/device-agent/run.sh'`
-      )
+    configJson.things.forEach(thingConfig=> {
+      
+      /* create thing through construct */
+      new thing.IotThing(this, thingConfig.name, {
+        machineImageId: ubuntuAmi,
+        vpc: deviceVpc,
+        keyName: KEY_NAME,
+        thingName: thingConfig.name,
+        instanceProfile: secureTunnelInstanceProfile,
+        githubRepoUrl: githubRepoUrl.valueAsString,
+        resources: thingConfig.resources
+      });  
     });
-
+    
     let s3Bucket = new s3.Bucket(this, 'aws-secure-tunneling-demo');
 
     new cdk.CfnOutput(this, 's3BucketName', {
       value: s3Bucket.bucketName,
       description: 'S3 bucket that will hold some objects needed to run this demo.'
-    });
-
-    let deviceMultiPlex = new ec2.CfnInstance(this, "deviceMultiPlex",{
-      imageId: ubuntuAmi,
-      instanceType: InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO).toString(),
-      iamInstanceProfile: secureTunnelInstanceProfile.ref,
-      keyName: KEY_NAME,
-      subnetId: deviceVpc.publicSubnets[0].subnetId,
-      tags: [{key: "Name", value: "iot-secure-tunnel-multiplex-demo-device"}],
-      userData: cdk.Fn.base64(`#!/bin/bash
-apt-get -y update
-apt-get -y install build-essential g++ tmux nodejs npm git jq awscli
-          
-cd /home/ubuntu
-su - ubuntu -c 'git clone ` + githubRepoUrl.valueAsString + `'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/device-agent && npm install'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/device-agent/run.sh'`
-      )
     });
     
   }

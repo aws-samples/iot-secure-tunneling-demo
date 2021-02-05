@@ -9,7 +9,7 @@ const Logger = require(`${__dirname}/logger`);
 let configPath = path.join(__dirname, '..', '..','config');
 
 var endpointConfig = require(`${configPath}/iot/resources/endpoint.json`);
-var thingsConfig = require(`${configPath}/configs.json`);
+var thingsConfig = require(`${configPath}/config.json`);
 
 const host = endpointConfig.endpointAddress;
 const localproxypath = path.join(__dirname, '..', '..','build', 'ubuntu18', 'localproxy');
