@@ -11,6 +11,8 @@ let logger = Logger.getLogger('device-agent');
 let configPath = path.join(__dirname, '..', '..','config')
 
 var endpointConfig = require(`${configPath}/iot/resources/endpoint.json`);
+var thingsConfig = require(`${configPath}/configs.json`)
+
 const host = endpointConfig.endpointAddress
 const localproxypath = path.join(__dirname, '..', '..','build', 'ubuntu18', 'localproxy');
 
@@ -26,11 +28,72 @@ getInstanceName().then(name => {
         host: host
     }
     
-    console.log(params.keyPath)
+    let device = iot.device(params);
     
-    //let device = iot.device(params);
+    let logger = Logger.getLogger('device-agent');
     
-})
+    var destinations = thingsConfig.things.filter(t => t.name === thingName)[0].secureTunnelDestinations
+    
+    let argIotOptions = {
+        region: '',
+        destination: destinations,
+        token: '',
+        verbose: 5
+    }
+    
+    device.on('connect', function() {
+        logger.info('Connected!');
+        let topicName = `$aws/things/${thingName}/tunnels/notify`
+        logger.info(`Subscribing to ${topicName}...`);
+        device.subscribe(topicName);
+    
+        topicName = `secure-tunnel-demo/ping/${thingName}`;
+        logger.info(`Publishing heartbeat message...`);
+        device.publish(topicName, JSON.stringify({ msg: 'I am up and running'}));
+        setInterval(
+            function() {
+                let topicName = `secure-tunnel-demo/ping/${thingName}`;
+                logger.info(`Publishing heartbeat message...`);
+                device.publish(topicName, JSON.stringify({ msg: 'I am up and running'}));
+            }, 
+            60000
+        );
+    });
+
+    device.on('message', function(topic, payload) {
+        logger.info('A tunnel just got created:');
+        logger.info(payload.toString());
+        logger.info('opening the tunnel ... ');
+        let jpayload = JSON.parse(payload.toString());
+        argIotOptions.token = jpayload.clientAccessToken;
+        argIotOptions.region = jpayload.region;
+        try { 
+            calliotagent();
+        } catch (e) { 
+            logger.error(e);
+        }
+    });
+
+    const calliotagent = () => {
+        const iotagent = spawn(localproxypath, [
+            '-r', argIotOptions.region,
+            '-d', argIotOptions.destination,
+            '-t', argIotOptions.token,
+            '-v', argIotOptions.verbose
+        ]);
+        iotagent.on('error', (e) => logger.error(e))
+        iotagent.on('close', (e) => logger.info(e))
+        iotagent.stderr.on('data',(data) => {
+            logger.error('stderr')
+            logger.error(Buffer.from(data).toString())
+        });
+
+        iotagent.stdout.on('data', (data) => {
+            logger.error('stdout')
+            logger.error(Buffer.from(data).toString())
+        })
+    };
+});
 
 function getInstanceName() {
     return new Promise(function(resolve, reject) {
@@ -66,75 +129,3 @@ function getInstanceIdentityDocument() {
         }).catch(reject);    
     })
 }
-
-/*
-let configPath = path.join(__dirname, '..', '..','config')
-var thingConfig = require(`${configPath}/iot/resources/thing.json`);
-var endpointConfig = require(`${configPath}/iot/resources/endpoint.json`);
-
-const thingName = thingConfig.thingName
-
-let logger = Logger.getLogger('device-agent');
-let argIotOptions = {
-    region: '',
-    destination: 'HTTP1=localhost:8089,SSH1=localhost:22',
-    token: '',
-    verbose: 5
-}
-
-
-
- device.on('connect', function() {
-    logger.info('Connected!');
-    let topicName = `$aws/things/${thingName}/tunnels/notify`
-    logger.info(`Subscribing to ${topicName}...`);
-    device.subscribe(topicName);
-
-    topicName = `secure-tunnel-demo/ping/${thingName}`;
-    logger.info(`Publishing heartbeat message...`);
-    device.publish(topicName, JSON.stringify({ msg: 'I am up and running'}));
-    setInterval(
-        function() {
-            let topicName = `secure-tunnel-demo/ping/${thingName}`;
-            logger.info(`Publishing heartbeat message...`);
-            device.publish(topicName, JSON.stringify({ msg: 'I am up and running'}));
-        }, 
-        60000
-    );
-});
-
-device.on('message', function(topic, payload) {
-    logger.info('A tunnel just got created:');
-    logger.info(payload.toString());
-    logger.info('opening the tunnel ... ');
-    let jpayload = JSON.parse(payload.toString());
-    argIotOptions.token = jpayload.clientAccessToken;
-    argIotOptions.region = jpayload.region;
-    try { 
-        calliotagent();
-    } catch (e) { 
-        logger.error(e);
-    }
-});
-
-const calliotagent = () => {
-    const iotagent = spawn(localproxypath, [
-        '-r', argIotOptions.region,
-        '-d', argIotOptions.destination,
-        '-t', argIotOptions.token,
-        '-v', argIotOptions.verbose
-    ]);
-    iotagent.on('error', (e) => logger.error(e))
-    iotagent.on('close', (e) => logger.info(e))
-    iotagent.stderr.on('data',(data) => {
-        logger.error('stderr')
-        logger.error(Buffer.from(data).toString())
-    });
-
-    iotagent.stdout.on('data', (data) => {
-        logger.error('stdout')
-        logger.error(Buffer.from(data).toString())
-    })
-
-}
-*/
