@@ -112,7 +112,8 @@ function getInstanceName() {
         ec2.describeTags(params, function(err, data) {
          if (err) reject(err);
          else {
-            resolve(data.Tags.filter(d => d.Key === 'Name')[0].ResourceId);
+            console.log(data);
+            resolve(data.Tags.filter(d => d.Key === 'Name')[0].Value);
          }
         });
        }); 
