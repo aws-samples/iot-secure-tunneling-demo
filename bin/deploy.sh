@@ -2,6 +2,8 @@
 
 mydir="${0%/*}"
 
+GITHUB_REPO_URL=$1
+
 # Create the IoT resources
 echo "################################################################################"
 echo '#           Provisioning the Iot Agent resources on AWS IoT Core ...           #'
@@ -20,7 +22,7 @@ echo ""
 echo "################################################################################"
 echo '#                          Deploying the Device VPC...                         #'
 echo "################################################################################"
-($mydir/device-vpc/deploy.sh)
+($mydir/device-vpc/deploy.sh $GITHUB_REPO_URL)
 echo ""
 
 # Sync all configs to the S3 bucket
