@@ -28,8 +28,8 @@ export class IotThing extends cdk.Construct {
         
         props.resources.forEach(resource => {
             userData = userData + 
-                `su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/` + resource + ` && npm install'
-                su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/` + resource + `/run.sh'`    
+                `su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/` + resource + ` && npm install\n'
+                su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/` + resource + `/run.sh'\n`    
         })
       
         const thing = new ec2.CfnInstance(this, props.thingName, {
