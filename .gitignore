@@ -3,5 +3,6 @@
 **/cdk.out/
 **/.DS_Store
 **/cdk.context.json
-config
+config/ec2/*
+config/iot/*
 logs
