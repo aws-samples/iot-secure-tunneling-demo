@@ -17,6 +17,9 @@ Let's get started. Run the following command to create the tunnel:
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/create.sh 
 ```
+
+Press enter when prompted for thing name (or enter secure-tunnel-demo).
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test1.gif)
 
 Run the following command to check the tunnel status.
@@ -24,6 +27,9 @@ Run the following command to check the tunnel status.
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/describe.sh 
 ```
+
+Press enter when prompted for thing name (or enter secure-tunnel-demo).
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test2.gif)
 
 The destinationConnectionState status should be CONNECTED, because our device was subscribing to the MQTT topic that AWS IoT publishes on whenever a tunnel is created. Once the device received that notification, it uses the tunnel CAT to run the localproxy in destination mode and connect to the tunnel.
@@ -42,6 +48,10 @@ Now, what we will do is run the local proxy in source mode on Cloud9. The pictur
 cd ~/environment/iot-secure-tunneling/
 ./bin/local-proxy/run-source-mode.sh
 ```
+
+Press enter when prompted for thing name (or enter secure-tunnel-demo).
+
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test3.gif)
 
 At this point, the sourceConnectionState status should be CONNECTED as well. Open a new terminal windown on Cloud9 (the current one is running the local proxy in source mode) and run the following command to check it:
@@ -50,6 +60,8 @@ At this point, the sourceConnectionState status should be CONNECTED as well. Ope
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/describe.sh 
 ```
+Press enter when prompted for thing name (or enter secure-tunnel-demo).
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test4.gif)
 
 The destination status was already connected, but after you ran the localproxy in source mode, the source status should also show as connected:
@@ -76,8 +88,9 @@ cd iot-secure-tunneling-demo
 tail -100 logs/device-agent.log
 exit
 ```
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test5.gif)
 
-Congratulations, you successfully run the demo. Once you are done with it, make sure to go to the next step to clean up your AWS resources.
+Congratulations, you successfully run the demo. You may now optionally see how multiplex would work with secure tunnels (i.e. the ability to connect over multiple ports) or you can cleanup your environment.
 
-[Back: 2. Deploying the demo](./deploy.md)  |  [Next: 4. Cleaning Up](./cleanup.md)
+[Back: 2. Deploying the demo](./deploy.md)  |  [Optional: 4. Testing the Multiplex Deom](./test-multiplex.md) | [Final: 5. Cleaning Up](./cleanup.md)
