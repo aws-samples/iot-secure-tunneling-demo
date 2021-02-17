@@ -19,15 +19,18 @@ Let's get started. Run the following command to create the tunnel:
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/create.sh 
 ```
-![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex1.gif)
 
-Type in *secure-tunnel-demo-multiplex* and press *Enter* when prompted to enter thing name.  
+Type in *secure-tunnel-demo-multiplex* and press *Enter* when prompted to enter thing name.
+
+![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex1.gif)
 
 Run the following command to check the tunnel status.
 ```
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/describe.sh 
 ```
+Type in *secure-tunnel-demo-multiplex* and press *Enter* when prompted to enter thing name.
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex2.gif)
 
 The destinationConnectionState status should be CONNECTED, because our device was subscribing to the MQTT topic that AWS IoT publishes on whenever a tunnel is created. Once the device received that notification, it uses the tunnel CAT to run the localproxy in destination mode and connect to the tunnel.
