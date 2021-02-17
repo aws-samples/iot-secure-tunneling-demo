@@ -49,14 +49,20 @@ Now, what we will do is run the local proxy in source mode on Cloud9. The pictur
 cd ~/environment/iot-secure-tunneling/
 ./bin/local-proxy/run-source-mode.sh
 ```
+
+Type in *secure-tunnel-demo-multiplex* and press *Enter* when prompted to enter thing name.
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex3.gif)
 
 At this point, the sourceConnectionState status should be CONNECTED as well. Open a new terminal windown on Cloud9 (the current one is running the local proxy in source mode) and run the following command to check it:
+
+Type in *secure-tunnel-demo-multiplex* and press *Enter* when prompted to enter thing name.
 
 ```
 cd ~/environment/iot-secure-tunneling/
 ./bin/tunnel/describe.sh 
 ```
+
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex4.gif)
 
 The destination status was already connected, but after you ran the localproxy in source mode, the source status should also show as connected:
@@ -73,6 +79,8 @@ We can finally ssh to the device. The picture bellow illustrates the process:
 3. Once the request arrives on the local proxy running in destination mode on the device, it is forwarded to the local ssh daemons running on port 22.
 
 On the second terminal windown on Cloud9 (the first one is running the local proxy in source mode) and run the following command:
+
+Type in *secure-tunnel-demo-multiplex* and press *Enter* when prompted to enter thing name.
 
 ```
 cd ~/environment/iot-secure-tunneling/
@@ -103,6 +111,6 @@ curl http://localhost:3333/device/mem | jq .
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex6.gif)
 
 
-Congratulations, you successfully run the demo. Once you are done with it, make sure to go to the next step to clean up your AWS resources.
+Congratulations, you have successfully run the demo. Once you are done with it, make sure to go to the next step to clean up your AWS resources.
 
 [Back: 3. Test the Demo](./test.md)  |  [Next: 5. Cleaning Up](./cleanup.md)
