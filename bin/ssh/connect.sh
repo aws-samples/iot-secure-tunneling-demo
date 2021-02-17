@@ -25,8 +25,6 @@ do
     fi
 done
 
-PORT=5555
-
 ssh -o StrictHostKeyChecking=no \
 -o UserKnownHostsFile=/dev/null \
 -i $EC2_RESOURCES_PATH/$EC2_KEY_NAME.pem ubuntu@localhost -p $SSH_PORT
