@@ -12,5 +12,5 @@ cd ~/environment/iot-secure-tunneling/
 
 3. Delete you Cloud9 environment. Detailed instructions [here](https://docs.aws.amazon.com/cloud9/latest/user-guide/delete-environment.html).
 
-[Back: 3. Testing the demo](./test.md)
+[Back: 3. Testing the demo](./test.md) | [Back: Optional: 4. Testing the Multiplex Demo](./test-multiplex.md)
 
