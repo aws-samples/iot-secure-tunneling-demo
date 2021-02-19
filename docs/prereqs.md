@@ -1,6 +1,6 @@
 # 1. AWS IoT Secure Tunneling Demo Prerequisites
 
-*Note: You can run this demo either with AWS Cloud9 or AWS CloudShell.  If you want to leverage [AWS CloudShell](https://aws.amazon.com/cloudshell/) please use these [setup docs instead](./prereqs-cloudshell).*
+*Note: You can run this demo either with AWS Cloud9 or AWS CloudShell.  If you want to leverage [AWS CloudShell](https://aws.amazon.com/cloudshell/) please use these [prereq docs instead](./prereqs-cloudshell.md).*
 
 ## Setup Cloud9 Environment
 
