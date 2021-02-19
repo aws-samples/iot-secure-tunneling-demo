@@ -1,4 +1,4 @@
-# 4. Testing the AWS IoT Secure Tunneling Multiplex Demo [OPTIONAl]
+# 3. Testing the AWS IoT Secure Tunneling Multiplex Demo [OPTIONAl]
 
 ## Close the existing tunnel
 
@@ -110,7 +110,6 @@ curl http://localhost:3333/device/mem | jq .
 ```
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex6.gif)
 
-
 Congratulations, you have successfully run the demo. Once you are done with it, make sure to go to the next step to clean up your AWS resources.
 
-[Back: 3. Test the Demo](./test.md)  |  [Next: 5. Cleaning Up](./cleanup.md)
+[Back: 2. Test the Demo](./test.md)  |  [Next: 4. Cleaning Up](./cleanup.md)

@@ -1,4 +1,4 @@
-# 3. Testing the AWS IoT Secure Tunneling Demo
+# 2. Testing the AWS IoT Secure Tunneling Demo
 
 Now that we have all the demo infrastructure (Cloud9 environment, device VPC, device EC2 instance and IoT resources) setup, we can finally test the AWS IoT Secure Tunneling.
 
@@ -91,6 +91,6 @@ exit
 
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test5.gif)
 
-Congratulations, you successfully run the demo. You may now optionally see how multiplex would work with secure tunnels (i.e. the ability to connect over multiple ports) or you can cleanup your environment.
+Congratulations, you have successfully run the demo. You may now optionally see how multiplex would work with secure tunnels (i.e. the ability to connect over multiple ports) or you can cleanup your environment.
 
-[Back: 2. Deploying the demo](./deploy.md)  |  [Optional: 4. Testing the Multiplex Deom](./test-multiplex.md) | [Final: 5. Cleaning Up](./cleanup.md)
+[Back: 1. Deploying the demo](./deploy.md)  |  [Optional: 3. Testing the Multiplex Demo](./test-multiplex.md) | [Final: 5. Cleaning Up](./cleanup.md)
