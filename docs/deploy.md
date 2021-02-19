@@ -15,10 +15,10 @@ For example, if you are using the us-east-1 type 'us-east-1' when prompted.
 In AWS CloudShell, type the following commands to setup your environment:
 ```
 npm update -g
-npm install aws-cdk
-sudo yum install libatomic
+npm install -g aws-cdk
 sudo yum install -y jq
-sudo yum install openssl11-devel
+sudo yum install -y libatomic
+sudo yum install -y openssl11-devel
 ```
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/deploy/deploy1.gif)
 
