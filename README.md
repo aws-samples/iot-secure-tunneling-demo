@@ -15,10 +15,11 @@ On this demo, you will establish bidirectional communication to remote devices o
 
 To get started, please follow theese instructions:
 
-1. [Deploying the demo](./docs/deploy.md)
-2. [Testing the demo](./docs/test.md)
-3. [Optional: Testing the multiplex demo](./docs/test-multiplex.md)
-4. [Cleaning up](./docs/cleanup.md)
+1. [Prerequisites](./docs/prereqs.md)
+2. [Deploying the demo](./docs/deploy.md)
+3. [Testing the demo](./docs/test.md)
+4. [Optional: Testing the multiplex demo](./docs/test-multiplex.md)
+5. [Cleaning up](./docs/cleanup.md)
 
 # License
 

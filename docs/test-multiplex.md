@@ -112,4 +112,4 @@ curl http://localhost:3333/device/mem | jq .
 
 Congratulations, you have successfully run the demo. Once you are done with it, make sure to go to the next step to clean up your AWS resources.
 
-[Back: 2. Test the Demo](./test.md)  |  [Next: 4. Cleaning Up](./cleanup.md)
+[Back: 3. Test the Demo](./test.md)  |  [Next: 5. Cleaning Up](./cleanup.md)

@@ -1,24 +1,12 @@
-# 1. Deploying the AWS IoT Secure Tunneling Demo
+# 2. Deploying the AWS IoT Secure Tunneling Demo
 
-Follow the steps bellow to deploy the demo on your AWS account. Leverage [AWS CloudShell](https://aws.amazon.com/cloudshell/).  If this is your first time to use AWS CloudShell it may take a few minutes to initialize.
-
-## CloudShell First-Time Use
-You will want to set your AWS region (however you will not need to provide your AWS access key ID or secret access key).
-
-```
-aws configure
-```
-
-For example, if you are using the us-east-1 type 'us-east-1' when prompted.   
+Follow the steps bellow to deploy the demo on your AWS account. You should type the commmands on a terminal windown from your Cloud9 environment.
 
 ## Installing the prerequisites
-In AWS CloudShell, type the following commands to setup your environment:
+On your Cloud9 Environment, type the following commands to setup your environment:
 ```
+sudo apt-get install -y jq
 npm update -g
-npm install -g aws-cdk
-sudo yum install -y jq
-sudo yum install -y libatomic
-sudo yum install -y openssl11-devel
 ```
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/deploy/deploy1.gif)
 
@@ -32,8 +20,8 @@ git clone https://github.com/blakewell/iot-secure-tunneling-demo.git iot-secure-
 ## Deploying the demo
 Finally, run the following command in order to depoy the demo:
 ```
-cd ~/environment/iot-secure-tunneling/
-./bin/deploy.sh
+cd ~/iot-secure-tunneling/
+./bin/deploy.sh https://github.com/blakewell/iot-secure-tunneling-demo
 ```
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/deploy/deploy3.gif)
 
