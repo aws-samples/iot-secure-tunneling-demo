@@ -2,7 +2,12 @@
 mydir="${0%/*}"
 CONFIG_PATH=$mydir/../../config
 IOT_RESOURCES_PATH=$CONFIG_PATH/iot/resources
+
 LOCAL_PROXY_PATH=$mydir/../../build/ubuntu18
+OS_TYPE=`uname -r`
+if [[ $OS_TYPE =~ "amzn2" ]]; then
+    LOCAL_PROXY_PATH=$mydir/../../build/amzn2
+fi
 
 read -p "Enter the thing name [secure-tunnel-demo]: " THING_NAME
 THING_NAME=${THING_NAME:-secure-tunnel-demo}
