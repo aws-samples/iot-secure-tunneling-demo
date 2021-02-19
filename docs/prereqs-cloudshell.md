@@ -14,7 +14,10 @@ In AWS CloudShell, type the following commands to setup your environment:
 ```
 sudo npm update -g
 sudo npm install -g aws-cdk
-sudo yum install -y jq
 sudo yum install -y libatomic
 sudo yum install -y openssl11-devel
 ```
+
+Please note that the instructions will use *~/environment* which is the root directory for Cloud9 applications.  CloudShell does not use that as a root directory and so you can leave that out of any commands you run.
+
+[Back: index](../README.md)  |  [Next: 2. Deploying the demo](./deploy.md)
