@@ -23,8 +23,6 @@ do
     
 done
 
-
-
 # Uploading tunnel info S3
 S3_BUCKET=$(aws cloudformation describe-stacks --stack-name AwsIotSecTunnelStack | jq -r ".Stacks[0].Outputs[0].OutputValue")
 echo "[2/2] Removing tunnel configuration from s3..."

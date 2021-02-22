@@ -1,4 +1,4 @@
-# 4. Testing the AWS IoT Secure Tunneling Multiplex Demo [OPTIONAl]
+.# 4. Testing the AWS IoT Secure Tunneling Multiplex Demo [OPTIONAl]
 
 ## Close the existing tunnel
 

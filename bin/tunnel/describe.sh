@@ -18,6 +18,3 @@ then
 else
     echo "$THING_TUNNEL_PATH file does not exist."
 fi
-
-
-

@@ -26,7 +26,7 @@ After about 60-120 seconds, you should see a response that looks like this:
 }
 ```
 
-The devices takes about 60 seconds to setup on the EC2 instance and then pings a heartbeat message every 60 seconds.  This verifies that your device is up and running.
+This verifies that your device is up and running.
 
 ## Create the tunnel
 
