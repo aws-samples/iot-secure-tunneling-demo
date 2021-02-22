@@ -10,6 +10,24 @@ The first step will be to create the tunnel on AWS IoT Core. The picture below i
 3. It will use the CAT to run the local proxy on destination mode.
 4. That will stablish the destination connection with the tunnel.
 
+## Verify Device is Running
+
+Go to **AWS IoT Core -> Test -> MQTT test client** and subscribe to the following topic
+
+```
+secure-tunnel-demo/ping/secure-tunnel-demo
+```
+
+After about 60-120 seconds, you should see a response that looks like this:
+
+```
+{
+  "msg": "I am up and running"
+}
+```
+
+This verifies that your device is up and running.
+
 ## Create the tunnel
 
 Let's get started. Run the following command to create the tunnel:
