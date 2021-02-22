@@ -96,6 +96,6 @@ exit
 ```
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test/test5.gif)
 
-Congratulations, you successfully run the demo. Once you are done with it, make sure to go to the next step to clean up your AWS resources.
+Congratulations, you successfully run the demo. Once you are done with it, you can run the optional multi-plex environment or clean up the environment.
 
-[Back: 2. Deploying the demo](./deploy.md)  |  [Next: 4. Cleaning Up](./cleanup.md)
+[Back: 2. Deploying the demo](./deploy.md)  |  [Optional: 4. Test Multiplex](./test-multiplex.md) | [Next: 5. Cleaning Up](./cleanup.md)
