@@ -5,7 +5,7 @@
 If you still have the tunnel open from the previous exercise, you can easily close this by closing the terminal window.  We will want to establish a new tunnel to our second device that contains both the local proxy and a local API.
 
 The first step will be to create the tunnel on AWS IoT Core. The picture below illustrates the process:
-![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex1.png)
+![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex0.png)
 
 1. We will run a script on Cloud9, to create the tunnel on AWS IoT Core.
 2. Once the tunnel is created, the device that is subscribed to a specific MQTT topic will receive a notification with the client access token (CAT).
