@@ -97,7 +97,7 @@ exit
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex5.gif)
 
 
-## <a href="curlexample">Curl to the device</a>
+## Curl to the device
 We can additionally curl to the device.  Not only do we have an SSH port that we can connect to, we've opened an additional port and built an API to pull device information.  
 
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex2.png)
