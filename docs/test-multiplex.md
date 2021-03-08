@@ -1,4 +1,4 @@
-# 4. Testing the AWS IoT Secure Tunneling Multiplex Demo [OPTIONAl]
+# 4. Testing the AWS IoT Secure Tunneling Multiplex Demo [OPTIONAL]
 
 ## Close the existing tunnel
 
@@ -8,7 +8,7 @@ The first step will be to create the tunnel on AWS IoT Core. The picture below i
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex1.png)
 
 1. We will run a script on Cloud9, to create the tunnel on AWS IoT Core.
-2. Once the tunnel is created, the device that is subscribed a specific MQTT topic will receive a notification with the client access token (CAT).
+2. Once the tunnel is created, the device that is subscribed to a specific MQTT topic will receive a notification with the client access token (CAT).
 3. It will use the CAT to run the local proxy on destination mode.
 4. That will stablish the destination connection with the tunnel.
 
