@@ -70,7 +70,10 @@ The destination status was already connected, but after you ran the localproxy i
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex4.png)
 
 
-## Ssh to the Device
+## Choosing a Destination Connection on IoT Device
+Now that we've established connectivity, we can either connect via SSH or HTTP as we see available in our destinationConfig section.  The [Ssh to the Device](#sshexample) will walk you through on how to connect to SSH1 and the [Curl to Device](#curlexample) section will walk you how to establish a HTTP connection.
+
+## <a href="sshexample">Ssh to the Device</a>
 We can finally ssh to the device. The picture bellow illustrates the process:
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex1.png)
 
@@ -94,7 +97,7 @@ exit
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex5.gif)
 
 
-## Curl to the device
+## <a href="curlexample">Curl to the device</a>
 We can additionally curl to the device.  Not only do we have an SSH port that we can connect to, we've opened an additional port and built an API to pull device information.  
 
 ![](https://github.com/blakewell/iot-secure-tunneling-demo/blob/docs/imgs/test-multiplex/test_multiplex2.png)
