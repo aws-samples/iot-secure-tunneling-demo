@@ -1,0 +1,16 @@
+{
+    "things" : [
+        {
+            "name": "secure-tunnel-demo", 
+            "secureTunnelDestinations": "SSH1=localhost:22",
+            "secureTunnelSources": "SSH1=5555",
+            "resources": ["device-agent"] 
+        },
+        {
+            "name": "secure-tunnel-demo-multiplex",
+            "secureTunnelDestinations": "HTTP1=localhost:8089,SSH1=localhost:22",
+            "secureTunnelSources": "HTTP1=3333,SSH1=5555",
+            "resources": ["device-agent", "device-api"] 
+        }
+    ]
+}

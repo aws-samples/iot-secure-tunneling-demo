@@ -31,5 +31,6 @@ echo "##########################################################################
 $mydir/ec2/cleanup.sh
 echo ""
 
-# Removing local config directory
-rm -rf $CONFIG_PATH
+# Removing local config directories
+rm -rf $CONFIG_PATH/iot
+rm -rf $CONFIG_PATH/ec2

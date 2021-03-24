@@ -1,10 +1,13 @@
 # 1. AWS IoT Secure Tunneling Demo Prerequisites
 
+*Note: You can run this demo either with AWS Cloud9 or AWS CloudShell.  If you want to leverage [AWS CloudShell](https://aws.amazon.com/cloudshell/) please use these [prereq docs instead](./prereqs-cloudshell.md).*
+
+## Setup Cloud9 Environment
+
 Before you can start, you have to make sure your AWS Clpoud 9 environment is up and running and current.  Navigate to the Cloud9 console: https://console.aws.amazon.com/cloud9
 
 Once you navigate to the Cloud9 console, click on the create environment button:
 ![](https://github.com/aws-samples/iot-secure-tunneling-demo/blob/docs/imgs/cloud9/screenshot-cloud9-1.png)
-  
   
 Type a name for your environment and click **Next step**:
 ![](https://github.com/aws-samples/iot-secure-tunneling-demo/blob/docs/imgs/cloud9/screenshot-cloud9-2.png)
@@ -24,5 +27,13 @@ During the demo, you will be running commands on your Cloud9 terminal.
   
   ![](https://github.com/aws-samples/iot-secure-tunneling-demo/blob/docs/imgs/cloud9/screenshot-cloud9-6.png)
 </details>
+
+## Installing the prerequisites
+On your Cloud9 Environment, type the following commands to setup your environment:
+```
+sudo apt-get install -y jq
+npm update -g
+```
+![](https://github.com/aws-samples/iot-secure-tunneling-demo/blob/docs/imgs/deploy/deploy1.gif)
 
 [Back: index](../README.md)  |  [Next: 2. Deploying the demo](./deploy.md)

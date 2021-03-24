@@ -4,10 +4,11 @@ exports.AwsIotSecTunnelStack = void 0;
 var fs = require('fs');
 var path = require('path');
 const ec2 = require("@aws-cdk/aws-ec2");
-const aws_ec2_1 = require("@aws-cdk/aws-ec2");
 const iam = require("@aws-cdk/aws-iam");
 const cdk = require("@aws-cdk/core");
 const s3 = require("@aws-cdk/aws-s3");
+const thing = require("./constructs/thing-construct");
+const configJson = require("../../config/config.json");
 let keyConfig = require(`${__dirname}/../../config/ec2/key-pair.json`);
 const ENV_PROPS = {
     env: {
@@ -22,12 +23,18 @@ class AwsIotSecTunnelStack extends cdk.Stack {
         let deviceVpc = new ec2.Vpc(this, 'iotSecureTunneling', {
             maxAzs: 2,
         });
+        const githubRepoUrl = new cdk.CfnParameter(this, 'githubRepoUrl', {
+            type: "String",
+            description: "The location of the Github repo used for the demo",
+            default: "https://github.com/aws-samples/iot-secure-tunneling-demo.git"
+        });
         const instanceRole = new iam.Role(this, 'ssminstancerole', {
             assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com'),
             managedPolicies: [
                 iam.ManagedPolicy.fromAwsManagedPolicyName('service-role/AmazonEC2RoleforSSM'),
-                iam.ManagedPolicy.fromAwsManagedPolicyName('AWSCloudFormationReadOnlyAccess')
-            ],
+                iam.ManagedPolicy.fromAwsManagedPolicyName('AWSCloudFormationReadOnlyAccess'),
+                iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonEC2ReadOnlyAccess')
+            ]
         });
         const secureTunnelInstanceProfile = new iam.CfnInstanceProfile(this, 'secureTunnelProfile', {
             roles: [instanceRole.roleName]
@@ -35,23 +42,17 @@ class AwsIotSecTunnelStack extends cdk.Stack {
         const ubuntuAmi = ec2.MachineImage.lookup({
             name: 'ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200112',
         }).getImage(this).imageId;
-        let device = new ec2.CfnInstance(this, "device", {
-            imageId: ubuntuAmi,
-            instanceType: aws_ec2_1.InstanceType.of(aws_ec2_1.InstanceClass.BURSTABLE2, aws_ec2_1.InstanceSize.MICRO).toString(),
-            iamInstanceProfile: secureTunnelInstanceProfile.ref,
-            keyName: KEY_NAME,
-            subnetId: deviceVpc.publicSubnets[0].subnetId,
-            tags: [{ key: "Name", value: "iot-secure-tunnel-demo-device" }],
-            userData: cdk.Fn.base64(`#!/bin/bash
-apt-get -y update
-apt-get -y install build-essential g++ tmux nodejs npm git jq awscli
-          
-cd /home/ubuntu
-su - ubuntu -c 'git clone https://github.com/aws-samples/iot-secure-tunneling-demo.git'
-cd /home/ubuntu/iot-secure-tunneling-demo
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo/device-agent && npm install'
-su - ubuntu -c 'cd /home/ubuntu/iot-secure-tunneling-demo && ./bin/device-agent/run.sh'`)
+        configJson.things.forEach(thingConfig => {
+            /* create thing through construct */
+            new thing.IotThing(this, thingConfig.name, {
+                machineImageId: ubuntuAmi,
+                vpc: deviceVpc,
+                keyName: KEY_NAME,
+                thingName: thingConfig.name,
+                instanceProfile: secureTunnelInstanceProfile,
+                githubRepoUrl: githubRepoUrl.valueAsString,
+                resources: thingConfig.resources
+            });
         });
         let s3Bucket = new s3.Bucket(this, 'aws-secure-tunneling-demo');
         new cdk.CfnOutput(this, 's3BucketName', {
