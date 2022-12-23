@@ -34,7 +34,7 @@ export class IotThing extends cdk.Construct {
       
         const thing = new ec2.CfnInstance(this, props.thingName, {
             imageId: props.machineImageId,
-            instanceType: InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO).toString(),
+            instanceType: 'c6g.medium',
             iamInstanceProfile: props.instanceProfile.ref,
             keyName: props.keyName,
             subnetId: props.vpc.publicSubnets[0].subnetId,
