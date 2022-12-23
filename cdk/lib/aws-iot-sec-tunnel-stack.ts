@@ -47,7 +47,7 @@ export class AwsIotSecTunnelStack extends cdk.Stack {
     })
 
     const ubuntuAmi = ec2.MachineImage.lookup({
-      name: 'ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20200112',
+      name: 'ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-arm64-server-20221207',
     }).getImage(this).imageId;
     
     configJson.things.forEach(thingConfig=> {
