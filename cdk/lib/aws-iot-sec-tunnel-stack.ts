@@ -1,11 +1,10 @@
 var fs = require('fs');
 var path = require('path');
-import ec2 = require('@aws-cdk/aws-ec2');
-import {InstanceClass,InstanceSize,InstanceType} from '@aws-cdk/aws-ec2';
-import iam = require('@aws-cdk/aws-iam');
-import cdk = require('@aws-cdk/core');
-import s3 = require('@aws-cdk/aws-s3');
-import thing = require('./constructs/thing-construct')
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as cdk from 'aws-cdk-lib';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as thing from './constructs/thing-construct'
 import * as configJson from "../../config/config.json"
 
 let keyConfig = require(`${__dirname}/../../config/ec2/key-pair.json`);
@@ -47,7 +46,8 @@ export class AwsIotSecTunnelStack extends cdk.Stack {
     })
 
     const ubuntuAmi = ec2.MachineImage.lookup({
-      name: 'ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-arm64-server-20221207',
+      name: 'ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-arm64-server-*',
+      owners: ['099720109477'],
     }).getImage(this).imageId;
     
     configJson.things.forEach(thingConfig=> {

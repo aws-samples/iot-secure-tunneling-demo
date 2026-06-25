@@ -1,7 +1,7 @@
 var path = require('path');
+var http = require('http');
 var iot = require('aws-iot-device-sdk');
-var AWS = require('aws-sdk');
-var superagent = require("superagent");
+var { EC2Client, DescribeTagsCommand } = require('@aws-sdk/client-ec2');
 
 const { spawn } = require('child_process');
 const Logger = require(`${__dirname}/logger`);
@@ -94,37 +94,23 @@ getInstanceName().then(name => {
 });
 
 function getInstanceName() {
-    return new Promise(function(resolve, reject) {
-       getInstanceIdentityDocument().then(id => {
-         AWS.config.update({region: id.region });
-
-        var ec2 = new AWS.EC2();
-    
-        var params = {
-              Filters: [
-                 {
-                Name: "resource-id", 
-                Values: [id.instanceId]
-               }
-              ]
-        };
-     
-        ec2.describeTags(params, function(err, data) {
-         if (err) reject(err);
-         else {
-            console.log(data);
-            resolve(data.Tags.filter(d => d.Key === 'Name')[0].Value);
-         }
+    return getInstanceIdentityDocument().then(id => {
+        const ec2 = new EC2Client({ region: id.region });
+        const command = new DescribeTagsCommand({
+            Filters: [{ Name: "resource-id", Values: [id.instanceId] }]
         });
-       }); 
+        return ec2.send(command).then(data => {
+            return data.Tags.filter(d => d.Key === 'Name')[0].Value;
+        });
     });
 }
 
 function getInstanceIdentityDocument() {
-    
     return new Promise(function(resolve, reject) {
-        superagent.get("http://169.254.169.254/latest/dynamic/instance-identity/document").then(r => {
-            return resolve(JSON.parse(r.text));
-        }).catch(reject);    
+        http.get("http://169.254.169.254/latest/dynamic/instance-identity/document", (res) => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => resolve(JSON.parse(data)));
+        }).on('error', reject);
     });
 }

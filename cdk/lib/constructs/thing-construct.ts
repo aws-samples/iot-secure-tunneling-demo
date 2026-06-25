@@ -1,7 +1,7 @@
-import * as cdk from '@aws-cdk/core';
-import ec2 = require('@aws-cdk/aws-ec2');
-import {InstanceClass,InstanceSize,InstanceType} from '@aws-cdk/aws-ec2';
-import iam = require('@aws-cdk/aws-iam');
+import * as cdk from 'aws-cdk-lib';
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import { Construct } from 'constructs';
 
 export interface IotThingProps {
     machineImageId: string;
@@ -14,8 +14,8 @@ export interface IotThingProps {
 }
 
 
-export class IotThing extends cdk.Construct {
-    constructor(scope: cdk.Construct, id: string, props: IotThingProps) {
+export class IotThing extends Construct {
+    constructor(scope: Construct, id: string, props: IotThingProps) {
         super(scope, id);
         
         let userData = `#!/bin/bash

@@ -2,14 +2,14 @@
   "name": "device-api",
   "version": "1.0.0",
   "description": "Sample API to demonstrate HTTP calls",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2",
-    "systeminformation": "^5.21.7"
+    "express": "^5.1.0",
+    "systeminformation": "^5.25.11"
   }
 }
